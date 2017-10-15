@@ -1,0 +1,8 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor3\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.exe.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor3\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor3\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor3\ConsoleApplication\ConsoleApplication\bin\Debug\FileSystemVisitor.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor3\ConsoleApplication\ConsoleApplication\bin\Debug\FileSystemVisitor.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor3\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor3\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor3\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.pdb
