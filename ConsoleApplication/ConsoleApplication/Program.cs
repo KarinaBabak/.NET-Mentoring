@@ -11,24 +11,31 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            var directory = new Directory("D:/Epam/.NET Mentoring D1-D2/01. Advanced C#");
+            //var directory = new Directory("D:/Epam/.NET Mentoring D1-D2/01. Advanced C#");
+            var directory = new Directory("C:\\Program Files\\7-Zip");
             var fileSystemVisitor = new FileSystemVisitor.FileSystemVisitor();
 
 
-            fileSystemVisitor.Start += ShowMessage;
-            fileSystemVisitor.Finish += ShowMessage;
+            fileSystemVisitor.Start += HandleStartEvent;
+            fileSystemVisitor.Finish += HandleFinishEvent;
             fileSystemVisitor.FileFound += HandleCustomEvent;
             fileSystemVisitor.DirectoryFound += ShowMessage;
             fileSystemVisitor.FilteredDirectoryFound += ShowMessage;
             fileSystemVisitor.FilteredFileFound += ShowMessage;
 
-
-            var files = directory.Accept(fileSystemVisitor);
-
-            foreach (var file in files)
+            try
             {
-                Console.WriteLine(file);
+                var files = directory.Accept(fileSystemVisitor);
+
+                foreach (var file in files)
+                {
+                    Console.WriteLine(file);
+                }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.ToString());
+            }           
 
             Console.ReadKey();
         }
@@ -46,6 +53,18 @@ namespace ConsoleApplication
         public static void HandleCustomEvent(bool stop)
         {
             Console.WriteLine("Stopped");
+        }
+
+        public static void HandleStartEvent(object sender, EventArgs e)
+        {
+            Console.WriteLine("Start searching");
+
+        }
+
+        public static void HandleFinishEvent(object sender, EventArgs e)
+        {
+            Console.WriteLine("Finish searching");
+
         }
 
         public static void HandleCustomEvent(object sender, FileSystemEventArgs e)

@@ -8,8 +8,6 @@ namespace FileSystemVisitor
 {
     public class Directory : IFileSystemElement
     {
-        private string path;
-
         public string Path
         {
             get
@@ -18,13 +16,10 @@ namespace FileSystemVisitor
             }
         }
 
-        #region ctors
-        public Directory()
-        {
-            this.path = "C:/";
-        }
+        private string path;
 
-        public Directory(string path)
+        #region ctors
+        public Directory(string path = "C:/")
         {
             this.path = path;
         }

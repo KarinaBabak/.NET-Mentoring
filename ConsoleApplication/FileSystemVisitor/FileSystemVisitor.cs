@@ -9,10 +9,6 @@ namespace FileSystemVisitor
 {
     public class FileSystemVisitor : IVisitor
     {
-        private Func<string, bool> filterPattern;
-        private bool stopSearching = false;
-        private string[] excludeCriterias = null;
-
         #region Events
 
         public delegate void FileSystemHandler(string message);
@@ -20,30 +16,30 @@ namespace FileSystemVisitor
         /// <summary>
         /// event that appears when search is started
         /// </summary>
-        public event FileSystemHandler Start;
+        public event EventHandler Start = delegate { };
 
         /// <summary>
         /// event that appears when search is finished
         /// </summary>
-        public event FileSystemHandler Finish;
+        public event EventHandler Finish = delegate { };
 
         /// <summary>
         /// events that appears when file and folder are found
         /// </summary>
-        public event EventHandler<FileSystemEventArgs> FileFound;
-        public event FileSystemHandler DirectoryFound;
+        public event EventHandler<FileSystemEventArgs> FileFound = delegate { };
+        public event FileSystemHandler DirectoryFound = delegate { };
 
-        public event FileSystemHandler FilteredFileFound;
-        public event FileSystemHandler FilteredDirectoryFound;
+        public event FileSystemHandler FilteredFileFound = delegate { };
+        public event FileSystemHandler FilteredDirectoryFound = delegate { };
 
         #endregion
 
+        private readonly Func<string, bool> filterPattern;
+        private bool stopSearching = false;
+        private string[] excludeCriterias = null;
+
         #region ctors
-        public FileSystemVisitor()
-        {
-            this.filterPattern = null;
-        }
-        public FileSystemVisitor(Func<string, bool> filter)
+        public FileSystemVisitor(Func<string, bool> filter = null)
         {
             this.filterPattern = filter;
 
@@ -65,28 +61,27 @@ namespace FileSystemVisitor
         {
             if (string.IsNullOrWhiteSpace(element.Path))
             {
-                throw new NullReferenceException("The directory is not exist");
+                throw new NullReferenceException("The path is not correct");
             }
 
-            if (Start != null)
+            if (!System.IO.Directory.Exists(element.Path))
             {
-                Start("Start searching");
+                throw new DirectoryNotFoundException("The directory is not exist");
             }
 
-            foreach (var fileSystemInfo in GetFiles(element.Path, false))
+            OnStart();
+
+            foreach (var fileSystemInfo in GetFiles(element.Path))
             {
                 yield return fileSystemInfo;
             }
 
-            if (Finish != null)
-            {
-                Finish("Finish searching");
-            }
+            OnFinish();
         }
 
         private IEnumerable<string> GetFiles(string path)
         {
-            if (this.stopSearching == true)
+            if (this.stopSearching)
             {
                 yield break;
             }
@@ -105,7 +100,7 @@ namespace FileSystemVisitor
 
                 if (filterPattern != null && filterPattern.Invoke(file))
                 {
-                    FilteredFileFound.Invoke("Filtered File found: ");
+                    FilteredFileFound("Filtered File found: ");
                 }
 
                 yield return file;
@@ -114,11 +109,11 @@ namespace FileSystemVisitor
             foreach (var subdirectory in subdirectories)
             {
                 OnItemFound(new FileSystemEventArgs(stopSearching));
-                DirectoryFound.Invoke("Directory found: " + subdirectory);
+                DirectoryFound("Directory found: " + subdirectory);
 
-                if (filterPattern != null && filterPattern.Invoke(subdirectory))
+                if (filterPattern != null && filterPattern(subdirectory))
                 {
-                    FilteredDirectoryFound.Invoke("Filtered Directory found: ");
+                    FilteredDirectoryFound("Filtered Directory found: " + subdirectory);
                 }
 
                 foreach (var file in GetFiles(subdirectory))
@@ -126,6 +121,16 @@ namespace FileSystemVisitor
                     yield return file;
                 }
             }
+        }
+
+        private void OnStart()
+        {
+            Start(this, EventArgs.Empty);
+        }
+
+        private void OnFinish()
+        {
+            Finish(this, EventArgs.Empty);
         }
     }
 }

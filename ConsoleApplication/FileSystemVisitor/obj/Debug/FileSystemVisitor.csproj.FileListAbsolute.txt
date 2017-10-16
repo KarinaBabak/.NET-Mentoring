@@ -3,3 +3,7 @@ D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor3\ConsoleApplication\F
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor3\ConsoleApplication\FileSystemVisitor\bin\Debug\FileSystemVisitor.pdb
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor3\ConsoleApplication\FileSystemVisitor\obj\Debug\FileSystemVisitor.dll
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor3\ConsoleApplication\FileSystemVisitor\obj\Debug\FileSystemVisitor.pdb
+E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\FileSystemVisitor\bin\Debug\FileSystemVisitor.dll
+E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\FileSystemVisitor\bin\Debug\FileSystemVisitor.pdb
+E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\FileSystemVisitor\obj\Debug\FileSystemVisitor.dll
+E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\FileSystemVisitor\obj\Debug\FileSystemVisitor.pdb
