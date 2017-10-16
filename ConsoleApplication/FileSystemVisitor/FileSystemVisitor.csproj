@@ -43,6 +43,7 @@
     <Compile Include="FileSystemEventArgs.cs" />
     <Compile Include="FileSystemVisitor.cs" />
     <Compile Include="IFileSystemElement.cs" />
+    <Compile Include="IFileSystemVisitor.cs" />
     <Compile Include="IVisitor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

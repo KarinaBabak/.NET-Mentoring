@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FileSystemVisitor
 {
-    public class FileSystemVisitor : IVisitor
+    public class FileSystemVisitor : IFileSystemVisitor
     {
         #region Events
 

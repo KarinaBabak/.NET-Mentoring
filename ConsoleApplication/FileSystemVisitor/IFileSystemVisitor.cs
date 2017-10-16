@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace FileSystemVisitor
 {
-    public interface IFileSystemElement
+    public interface IFileSystemVisitor: IVisitor
     {
-        string Path { get; }
-
-        IEnumerable<string> Accept(IFileSystemVisitor visitor);
+        event EventHandler Start;
     }
 }
