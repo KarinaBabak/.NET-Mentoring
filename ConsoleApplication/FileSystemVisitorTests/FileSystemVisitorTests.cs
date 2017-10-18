@@ -25,7 +25,7 @@ namespace FileSystemVisitorTests
             "C:\\Folder\\SubFolder\\file2.txt"
         };
 
-        private FileSystemVisitor.FileSystemVisitor _fileSystemVisitor;
+        private FileSystemVisitor.IFileSystemVisitor _fileSystemVisitor;
         //private Mock<FileSystemVisitor.FileSystemVisitor> _fileSystemVisitor = new Mock<FileSystemVisitor.FileSystemVisitor>();
         private Mock<FileSystemVisitor.Directory> _directoryFileSystemElementMock = new Mock<FileSystemVisitor.Directory>();
 
@@ -40,19 +40,10 @@ namespace FileSystemVisitorTests
             _fileSystemVisitor = new FileSystemVisitor.FileSystemVisitor();
             //_directoryFileSystemElement = new FileSystemVisitor.Directory();
 
-            _fileSystemVisitor.FileFound += fileFoundEventHandlerMock.Object;
+            //_fileSystemVisitor.FileFound += fileFoundEventHandlerMock.Object;
             _fileSystemVisitor.Start += startSearchEventHandlerMock.Object;
-            _fileSystemVisitor.Finish += finishSearchEventHandlerMock.Object;
+            //_fileSystemVisitor.Finish += finishSearchEventHandlerMock.Object;
         }
-
-        [TearDown]
-        public void TearDown()
-        {
-            _fileSystemVisitor.FileFound -= fileFoundEventHandlerMock.Object;
-            _fileSystemVisitor.Start -= startSearchEventHandlerMock.Object;
-            _fileSystemVisitor.Finish -= finishSearchEventHandlerMock.Object;
-        }
-
 
         [Test]
         [ExpectedException(typeof(DirectoryNotFoundException))]
@@ -81,40 +72,33 @@ namespace FileSystemVisitorTests
         public void FileSystemAccessor_StartSearch()
         {
             // arrange
+            //var mockdir = new Mock<FileSystemVisitor.Directory>();
             var directory = new FileSystemVisitor.Directory();
 
             // act
-            directory.Accept(this._fileSystemVisitor);
+            _directoryFileSystemElementMock.Setup
+                (d => d.Accept(It.IsAny<FileSystemVisitor.IFileSystemVisitor>())).Returns(filePaths);
             startSearchEventHandlerMock.Setup(s => s(It.IsAny<FileSystemVisitor.FileSystemVisitor>(), It.IsAny<EventArgs>())).Verifiable();
 
             // Assert
-            startSearchEventHandlerMock.Verify();
+            //startSearchEventHandlerMock.Verify();
         }
 
-        //[Test]
-        //public void FileSystemAccessor_FindFiles()
-        //{
-        //    // arrange
-        //    var directory = new FileSystemVisitor.Directory();
-        //    Mock<FileSystemVisitor.FileSystemVisitor> _fileSystemVisitor = new Mock<FileSystemVisitor.FileSystemVisitor>();
+        [Test]
+        public void FileSystemAccessor_FindFiles()
+        {
+            // arrange
+            var directory = new FileSystemVisitor.Directory();
+            var _fileSystemVisitor = new Mock<FileSystemVisitor.IFileSystemVisitor>();
 
-        //// act
-        //var actualResult = directory.Accept(this._fileSystemVisitor);
+            _fileSystemVisitor.Setup(i => i.Visit(directory)).Returns(this.filePaths.ToList());
 
-        //_fileSystemVisitor.Setup(i => i.Visit(directory)).Returns(new List<string> {
-        //    "C:\\Folder\\file1.txt",
-        //    "C:\\Folder\\file2.txt",
-        //    "C:\\Folder\\file1.pptx",
-        //    "C:\\Folder\\file2.mp4",
-        //    "C:\\Folder\\file3.pptx",
-        //    "C:\\Folder\\SubFolder\\file1.txt",
-        //    "C:\\Folder\\SubFolder\\file2.txt"
-        //});
+            // act
+            var actualResult = directory.Accept(this._fileSystemVisitor);
 
-
-        //    // Assert
-        //    Assert.AreEqual(actualResult.ToList().Count, 7);
-        //}
+            // Assert
+            Assert.AreEqual(actualResult.ToList().Count, 7);
+        }
 
     }
 }

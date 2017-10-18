@@ -14,3 +14,11 @@ E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplicat
 E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache
 E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.exe
 E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.exe.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor\ConsoleApplication\ConsoleApplication\bin\Debug\FileSystemVisitor.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor\ConsoleApplication\ConsoleApplication\bin\Debug\FileSystemVisitor.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task1_FileSystemVisitor\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache

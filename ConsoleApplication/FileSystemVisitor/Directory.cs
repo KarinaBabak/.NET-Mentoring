@@ -30,7 +30,7 @@ namespace FileSystemVisitor
         /// </summary>
         /// <param name="visitor"></param>
         /// <returns></returns>
-        public IEnumerable<string> Accept(IVisitor visitor)
+        public IEnumerable<string> Accept(IFileSystemVisitor visitor)
         {
             return visitor.Visit(this);
         }
