@@ -1,0 +1,8 @@
+E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\ConsoleApplication\bin\Release\ConsoleApplication.exe.config
+E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\ConsoleApplication\bin\Release\ConsoleApplication.exe
+E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\ConsoleApplication\bin\Release\ConsoleApplication.pdb
+E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\ConsoleApplication\bin\Release\FileSystemVisitor.dll
+E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\ConsoleApplication\bin\Release\FileSystemVisitor.pdb
+E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\ConsoleApplication\obj\Release\ConsoleApplication.csprojResolveAssemblyReference.cache
+E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\ConsoleApplication\obj\Release\ConsoleApplication.exe
+E:\Documents\Trainings\.Net Mentoring D1-D2\Tasks\.NET-Mentoring\ConsoleApplication\ConsoleApplication\obj\Release\ConsoleApplication.pdb

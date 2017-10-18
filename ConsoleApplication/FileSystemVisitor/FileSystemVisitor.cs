@@ -27,10 +27,10 @@ namespace FileSystemVisitor
         /// events that appears when file and folder are found
         /// </summary>
         public event EventHandler<FileSystemEventArgs> FileFound = delegate { };
-        public event FileSystemHandler DirectoryFound = delegate { };
+        public event EventHandler<string> DirectoryFound = delegate { };
 
-        public event FileSystemHandler FilteredFileFound = delegate { };
-        public event FileSystemHandler FilteredDirectoryFound = delegate { };
+        public event EventHandler<string> FilteredFileFound = delegate { };
+        public event EventHandler<string> FilteredDirectoryFound = delegate { };
 
         #endregion
 
@@ -100,7 +100,7 @@ namespace FileSystemVisitor
 
                 if (filterPattern != null && filterPattern.Invoke(file))
                 {
-                    FilteredFileFound("Filtered File found: ");
+                    OnFilteredFileFound(file);
                 }
 
                 yield return file;
@@ -109,11 +109,11 @@ namespace FileSystemVisitor
             foreach (var subdirectory in subdirectories)
             {
                 OnItemFound(new FileSystemEventArgs(stopSearching));
-                DirectoryFound("Directory found: " + subdirectory);
+                OnDirectoryFound(subdirectory);
 
                 if (filterPattern != null && filterPattern(subdirectory))
                 {
-                    FilteredDirectoryFound("Filtered Directory found: " + subdirectory);
+                    OnFilteredDirectoryFound(subdirectory);
                 }
 
                 foreach (var file in GetFiles(subdirectory))
@@ -132,5 +132,21 @@ namespace FileSystemVisitor
         {
             Finish(this, EventArgs.Empty);
         }
+
+        private void OnFilteredFileFound(string fileName)
+        {
+            FilteredFileFound(this, fileName);
+        }
+
+        private void OnFilteredDirectoryFound(string directoryName)
+        {
+            FilteredDirectoryFound(this, directoryName);
+        }
+
+        private void OnDirectoryFound(string directoryName)
+        {
+            DirectoryFound(this, directoryName);
+        }
+        
     }
 }
