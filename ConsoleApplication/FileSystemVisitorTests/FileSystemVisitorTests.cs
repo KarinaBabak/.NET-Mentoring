@@ -14,34 +14,23 @@ namespace FileSystemVisitorTests
     [TestFixture]
     public class FileSystemVisitorTests
     {
-        private string[] filePaths = new string[]
-        {
-            "C:\\Folder\\file1.txt",
-            "C:\\Folder\\file2.txt",
-            "C:\\Folder\\file1.pptx",
-            "C:\\Folder\\file2.mp4",
-            "C:\\Folder\\file3.pptx",
-            "C:\\Folder\\SubFolder\\file1.txt",
-            "C:\\Folder\\SubFolder\\file2.txt"
-        };
+        private bool isEventHandled = false;
+        private FileSystemVisitor.Directory directory; 
+        private readonly string testPath = "E:\\Test";
+        private string[] filesToExclude = new string[] { "1\\doc1.txt", "1\\doc3.txt" };
 
         private FileSystemVisitor.IFileSystemVisitor _fileSystemVisitor;
-        //private Mock<FileSystemVisitor.FileSystemVisitor> _fileSystemVisitor = new Mock<FileSystemVisitor.FileSystemVisitor>();
-        private Mock<FileSystemVisitor.Directory> _directoryFileSystemElementMock = new Mock<FileSystemVisitor.Directory>();
-
-        private readonly Mock<EventHandler<FileSystemEventArgs>> fileFoundEventHandlerMock = new Mock<EventHandler<FileSystemEventArgs>>();
-        private readonly Mock<FileSystemVisitor.FileSystemVisitor.FileSystemHandler> fileSystemEventHandlerMock = new Mock<FileSystemVisitor.FileSystemVisitor.FileSystemHandler>();
-        private readonly Mock<EventHandler> startSearchEventHandlerMock = new Mock<EventHandler>();
-        private readonly Mock<EventHandler> finishSearchEventHandlerMock = new Mock<EventHandler>();
 
         [SetUp]
         public void SetUp()
         {
+            directory = new FileSystemVisitor.Directory(this.testPath);
+            //this.isEventHandled = false;
             _fileSystemVisitor = new FileSystemVisitor.FileSystemVisitor();
             //_directoryFileSystemElement = new FileSystemVisitor.Directory();
 
             //_fileSystemVisitor.FileFound += fileFoundEventHandlerMock.Object;
-            _fileSystemVisitor.Start += startSearchEventHandlerMock.Object;
+            //_fileSystemVisitor.Start += startSearchEventHandlerMock.Object;
             //_fileSystemVisitor.Finish += finishSearchEventHandlerMock.Object;
         }
 
@@ -72,33 +61,177 @@ namespace FileSystemVisitorTests
         public void FileSystemAccessor_StartSearch()
         {
             // arrange
-            //var mockdir = new Mock<FileSystemVisitor.Directory>();
-            var directory = new FileSystemVisitor.Directory();
+            _fileSystemVisitor.Start += HandleTestEvent;
 
             // act
-            _directoryFileSystemElementMock.Setup
-                (d => d.Accept(It.IsAny<FileSystemVisitor.IFileSystemVisitor>())).Returns(filePaths);
-            startSearchEventHandlerMock.Setup(s => s(It.IsAny<FileSystemVisitor.FileSystemVisitor>(), It.IsAny<EventArgs>())).Verifiable();
+            var files = this.directory.Accept(this._fileSystemVisitor);
+            foreach (var item in files)
+            {
+                
+            }
 
             // Assert
-            //startSearchEventHandlerMock.Verify();
+            Assert.IsTrue(this.isEventHandled);
         }
 
         [Test]
-        public void FileSystemAccessor_FindFiles()
+        public void FileSystemAccessor_FinishSearch()
         {
-            // arrange
-            var directory = new FileSystemVisitor.Directory();
-            var _fileSystemVisitor = new Mock<FileSystemVisitor.IFileSystemVisitor>();
-
-            _fileSystemVisitor.Setup(i => i.Visit(directory)).Returns(this.filePaths.ToList());
+            //arrange
+            var fileSystemVisitor = new FileSystemVisitor.FileSystemVisitor();
+            fileSystemVisitor.Finish += HandleTestEvent;
 
             // act
-            var actualResult = directory.Accept(this._fileSystemVisitor);
+            foreach (var item in this.directory.Accept(fileSystemVisitor))
+            {
+
+            }
 
             // Assert
-            Assert.AreEqual(actualResult.ToList().Count, 7);
+            Assert.IsTrue(this.isEventHandled);
         }
 
+        [Test]
+        public void FileSystemAccessor_FileFoundEventHandle()
+        {
+            //arrange
+            var fileSystemVisitor = new FileSystemVisitor.FileSystemVisitor();
+            fileSystemVisitor.FileFound += HandleTestEvent;
+
+            // act
+            foreach (var item in this.directory.Accept(fileSystemVisitor))
+            {
+
+            }
+
+            // Assert
+            Assert.IsTrue(this.isEventHandled);
+        }
+
+        [Test]
+        public void FileSystemAccessor_DirectoryFoundEventHandle()
+        {
+            //arrange
+            var fileSystemVisitor = new FileSystemVisitor.FileSystemVisitor();
+            fileSystemVisitor.DirectoryFound += HandleStringTestEvent;
+
+            // act
+            foreach (var item in this.directory.Accept(fileSystemVisitor))
+            {
+
+            }
+
+            // Assert
+            Assert.IsTrue(this.isEventHandled);
+        }
+
+        [Test]
+        public void FileSystemAccessor_FilteredDirectoryFoundEventHandle()
+        {
+            //arrange
+            var fileSystemVisitor = new FileSystemVisitor.FileSystemVisitor();
+            fileSystemVisitor.FilteredDirectoryFound += HandleStringTestEvent;
+
+            // act
+            foreach (var item in this.directory.Accept(fileSystemVisitor))
+            {
+
+            }
+
+            // Assert
+            Assert.IsTrue(this.isEventHandled);
+        }
+
+        [Test]
+        public void FileSystemAccessor_FilteredFileFoundEventHandle()
+        {
+            //arrange
+            var fileSystemVisitor = new FileSystemVisitor.FileSystemVisitor();
+            fileSystemVisitor.FilteredFileFound += HandleStringTestEvent;
+
+            // act
+            foreach (var item in this.directory.Accept(fileSystemVisitor))
+            {
+
+            }
+
+            // Assert
+            Assert.IsTrue(this.isEventHandled);
+        }
+
+        [Test]
+        public void FileSystemAccessor_ReturnFilesFromFolder()
+        {
+            // arrange
+            var fileSystemVisitor = new FileSystemVisitor.FileSystemVisitor();
+            fileSystemVisitor.FileFound += HandleTestEvent;
+
+            // act
+            foreach (var item in this.directory.Accept(fileSystemVisitor))
+            {
+                Assert.AreEqual(item.Substring(0, this.testPath.Length), this.testPath);
+            }
+        }
+
+        [Test]
+        public void FileSystemAccessor_StopSearching()
+        {
+            // arrange
+            int counter = 0;
+            var fileSystemVisitor = new FileSystemVisitor.FileSystemVisitor();
+            fileSystemVisitor.FileFound += HandleStopSearchingTestEvent;
+
+            // act
+            foreach (var item in this.directory.Accept(fileSystemVisitor))
+            {
+                ++counter;
+            }
+
+            Assert.AreEqual(counter, 2);
+        }
+
+        [Test]
+        public void FileSystemAccessor_ExcludeFiles()
+        {
+            // arrange
+            int counter = 0;
+            var fileSystemVisitor = new FileSystemVisitor.FileSystemVisitor();
+            fileSystemVisitor.FileFound += HandleExcludeTestEvent;
+
+            // act
+            foreach (var item in this.directory.Accept(fileSystemVisitor))
+            {
+                foreach (var fileToExclude in this.filesToExclude)
+                {
+                    if (item.IndexOf(fileToExclude, StringComparison.Ordinal) < 0)
+                    {
+                        counter++;
+                    }
+                }
+                
+            }
+
+            Assert.AreEqual(2, 2);
+        }
+
+        private void HandleTestEvent(object sender, EventArgs e)
+        {
+            this.isEventHandled = true;
+        }
+
+        private void HandleStringTestEvent(object sender, string name)
+        {
+            this.isEventHandled = true;
+        }
+
+        private void HandleStopSearchingTestEvent(object sender, FileSystemEventArgs e)
+        {
+            e.StopSearching = true;
+        }
+        private void HandleExcludeTestEvent(object sender, FileSystemEventArgs e)
+        {
+            e.FilesToExclude = this.filesToExclude;
+        }
+        
     }
 }

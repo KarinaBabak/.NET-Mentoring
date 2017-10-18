@@ -12,7 +12,7 @@ namespace ConsoleApplication
         static void Main(string[] args)
         {
             //var directory = new Directory("D:/Epam/.NET Mentoring D1-D2/01. Advanced C#");
-            var directory = new Directory("C:\\Program Files");
+            var directory = new Directory("E:\\Test");
             var fileSystemVisitor = new FileSystemVisitor.FileSystemVisitor();
 
 
@@ -72,7 +72,8 @@ namespace ConsoleApplication
         public static void HandleCustomEvent(object sender, FileSystemEventArgs e)
         {
             Console.WriteLine("File is found: ");
-            e.FilesToExclude = new string[] { "D:/Epam/.NET Mentoring D1-D2/01. Advanced C#\\02. Classes and Interfaces" + @"\Classes and Interfaces.mp4" };
+            e.FilesToExclude = new string[] { "1\\doc1.txt" };
+            //e.FilesToExclude = new string[] { "D:/Epam/.NET Mentoring D1-D2/01. Advanced C#\\02. Classes and Interfaces" + @"\Classes and Interfaces.mp4" };
         }
     }
 }

@@ -37,6 +37,7 @@ namespace FileSystemVisitor
         private readonly Func<string, bool> filterPattern;
         private bool stopSearching = false;
         private string[] excludeCriterias = null;
+        private string initialPath;
 
         #region ctors
         public FileSystemVisitor(Func<string, bool> filter = null)
@@ -69,9 +70,11 @@ namespace FileSystemVisitor
                 throw new DirectoryNotFoundException("The directory is not exist");
             }
 
+            this.initialPath = element.Path;
+
             OnStart();
 
-            foreach (var fileSystemInfo in GetFiles(element.Path))
+            foreach (var fileSystemInfo in GetFiles(this.initialPath))
             {
                 yield return fileSystemInfo;
             }
@@ -91,7 +94,7 @@ namespace FileSystemVisitor
 
             foreach (var file in files)
             {
-                if (this.excludeCriterias != null && this.excludeCriterias.Contains(file))
+                if (this.IsNeedToBeExcluded(file))
                 {
                     yield break;
                 }
@@ -108,7 +111,6 @@ namespace FileSystemVisitor
 
             foreach (var subdirectory in subdirectories)
             {
-                OnItemFound(new FileSystemEventArgs(stopSearching));
                 OnDirectoryFound(subdirectory);
 
                 if (filterPattern != null && filterPattern(subdirectory))
@@ -121,6 +123,17 @@ namespace FileSystemVisitor
                     yield return file;
                 }
             }
+        }
+
+        private bool IsNeedToBeExcluded(string file)
+        {
+            int startRelativePathIndex = this.initialPath.Length + 1;
+            string relativePathOfCurrentFile = file.Substring(startRelativePathIndex, file.Length - startRelativePathIndex);
+            if (this.excludeCriterias != null && this.excludeCriterias.Contains(relativePathOfCurrentFile))
+            {
+                return true;
+            }
+            return false;
         }
 
         private void OnStart()
