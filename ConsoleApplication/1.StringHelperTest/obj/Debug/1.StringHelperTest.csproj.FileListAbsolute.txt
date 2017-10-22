@@ -1,0 +1,9 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\1.StringHelperTest\bin\Debug\1.StringHelperTest.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\1.StringHelperTest\bin\Debug\1.StringHelperTest.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\1.StringHelperTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\1.StringHelperTest\bin\Debug\StringHelper.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\1.StringHelperTest\bin\Debug\StringHelper.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\1.StringHelperTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\1.StringHelperTest\obj\Debug\1.StringHelperTest.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\1.StringHelperTest\obj\Debug\1.StringHelperTest.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\1.StringHelperTest\obj\Debug\1.StringHelperTest.pdb

@@ -1,0 +1,5 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\StringHelper\bin\Debug\StringHelper.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\StringHelper\bin\Debug\StringHelper.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\StringHelper\obj\Debug\1.StringHelper.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\StringHelper\obj\Debug\StringHelper.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\StringHelper\obj\Debug\StringHelper.pdb

@@ -1,0 +1,9 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\2.ParserTests\bin\Debug\2.ParserTests.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\2.ParserTests\bin\Debug\2.ParserTests.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\2.ParserTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\2.ParserTests\bin\Debug\StringParser.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\2.ParserTests\bin\Debug\StringParser.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\2.ParserTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\2.ParserTests\obj\Debug\2.ParserTests.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\2.ParserTests\obj\Debug\2.ParserTests.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\2.ParserTests\obj\Debug\2.ParserTests.pdb

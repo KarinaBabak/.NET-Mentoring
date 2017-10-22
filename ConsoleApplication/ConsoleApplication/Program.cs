@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using StringHelper;
 
 namespace ConsoleApplication
 {
@@ -10,31 +10,32 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            string inputWorld;
+            StringHelper.StringHelper strHelper = new StringHelper.StringHelper();
 
             while(true)
             {
                 try
                 {
                     Console.WriteLine("Please input your minds: ");
-                    inputWorld = Console.ReadLine();
-                    if(String.IsNullOrWhiteSpace(inputWorld))
-                    {
-
-                    }
-                    Console.WriteLine(inputWorld[0]);
+                    strHelper.InputValue = Console.ReadLine();
+                    
+                    Console.WriteLine(strHelper.GetFirstStringSymbol());
                 }
                 catch(IndexOutOfRangeException ex)
                 {
                     Console.WriteLine("Please type something. Do not ignore!");
                 }
+                catch (EmptyArgumentException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
                 catch (ArgumentException ex)
                 {
-                    Console.WriteLine("ArgumentException");
+                    Console.WriteLine("Incorrect string. Please type something! ");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine();
+                    Console.WriteLine("Incorrect word");
                 }
             }
 

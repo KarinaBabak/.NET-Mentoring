@@ -1,0 +1,8 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\ParserConsoleApp\bin\Debug\ParserConsoleApp.exe.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\ParserConsoleApp\bin\Debug\ParserConsoleApp.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\ParserConsoleApp\bin\Debug\ParserConsoleApp.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\ParserConsoleApp\obj\Debug\ParserConsoleApp.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\ParserConsoleApp\obj\Debug\ParserConsoleApp.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\ParserConsoleApp\obj\Debug\ParserConsoleApp.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\ParserConsoleApp\bin\Debug\StringParser.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task2_Exception_Handling\ConsoleApplication\ParserConsoleApp\bin\Debug\StringParser.pdb

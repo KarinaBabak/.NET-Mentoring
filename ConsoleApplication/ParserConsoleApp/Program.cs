@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using StringParser;
 
 namespace ParserConsoleApp
 {
@@ -10,6 +9,9 @@ namespace ParserConsoleApp
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(StringParser.StringParser.ParseToInt("-16985"));
+            //Console.WriteLine(string.ParseToInt("55"));
+            Console.ReadKey();
         }
     }
 }
