@@ -36,10 +36,13 @@ namespace StringParser
                 isPlusSymbolContain = true;
             }
 
+            strToConvert = (isNegativeValue || isPlusSymbolContain)
+                    ? strToConvert.Substring(1, strToConvert.Length - 1)
+                    : strToConvert;
+
             int resultInt = 0;
 
-            int startIndex = (isNegativeValue || isPlusSymbolContain) ? 1 : 0;
-            for(int i = startIndex; i < strToConvert.Length; i++)
+            for(int i = 0; i < strToConvert.Length; i++)
             {
                 try
                 {
@@ -51,15 +54,7 @@ namespace StringParser
                     checked
                     {
                         resultInt *= 10;
-
-                        if (isNegativeValue)
-                        {
-                            resultInt -= (int)char.GetNumericValue(strToConvert[i]);
-                        }
-                        else
-                        {
-                            resultInt += (int)char.GetNumericValue(strToConvert[i]);
-                        }
+                        resultInt += (int)char.GetNumericValue(strToConvert[i]);
                     }
                 }
                 catch (FormatException ex)
@@ -72,10 +67,15 @@ namespace StringParser
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception("Parsing can not be finished");
+                    throw new Exception("Parsing can not be finished" + ex.InnerException);
                 }
-
             }
+
+            if (isNegativeValue)
+            {
+                resultInt = -resultInt;
+            }
+
             return resultInt;
         }
     }
