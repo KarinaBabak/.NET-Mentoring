@@ -7,3 +7,12 @@ D:\Epam\.NET Mentoring D1-D2\03. LINQ\Task\Task\Task\obj\Debug\SampleSupport.Sam
 D:\Epam\.NET Mentoring D1-D2\03. LINQ\Task\Task\Task\obj\Debug\Task.csproj.GenerateResource.Cache
 D:\Epam\.NET Mentoring D1-D2\03. LINQ\Task\Task\Task\obj\Debug\Task.exe
 D:\Epam\.NET Mentoring D1-D2\03. LINQ\Task\Task\Task\obj\Debug\Task.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task3_LINQ\Task\bin\Debug\Task.exe.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task3_LINQ\Task\obj\Debug\Task.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task3_LINQ\Task\obj\Debug\Task.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task3_LINQ\Task\obj\Debug\Task.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task3_LINQ\Task\obj\Debug\Task.Properties.Resources.resources
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task3_LINQ\Task\obj\Debug\SampleSupport.SampleForm.resources
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task3_LINQ\Task\obj\Debug\Task.csproj.GenerateResource.Cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task3_LINQ\Task\bin\Debug\Task.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task3_LINQ\Task\bin\Debug\Task.pdb
