@@ -183,7 +183,8 @@ namespace Task.Data
 						{
 							OrderID = (int)o.Element("id"),
 							OrderDate = (DateTime)o.Element("orderdate"),
-							Total = (decimal)o.Element("total")
+                            SupplierName = (string)o.Element("supplierName"),
+                            Total = (decimal)o.Element("total")
 						})
 						.ToArray()
 				})

@@ -80,6 +80,23 @@ namespace SampleQueries
         }
 
         [Category("Restriction Operators")]
+        [Title("Where - Task 4")]
+        [Description("This sample return customers id of customers who pay for all orders in total more than some value")]
+
+        public void Linq1_Expression()
+        {
+            decimal x = 3000;
+            var customers = from customer in dataSource.Customers
+                            where customer.Orders.Sum(order => order.Total) > x
+                            select customer.CustomerID;
+
+            foreach (var customer in customers)
+            {
+                ObjectDumper.Write(customer);
+            }
+        }
+
+        [Category("Restriction Operators")]
         [Title("Where - Task 5")]
         [Description("This sample return customers id of customers who pay for all orders in total more than some value")]
 
@@ -98,6 +115,34 @@ namespace SampleQueries
                         Suppliers = suppliers
                     }
                 );
+
+            foreach (var c in result)
+            {
+                ObjectDumper.Write(c.Customer);
+
+                foreach (var s in c.Suppliers)
+                {
+                    ObjectDumper.Write(s.SupplierName);
+                }
+
+            }
+        }
+
+        [Category("Restriction Operators")]
+        [Title("Where - Task 5")]
+        [Description("This sample return customers ")]
+
+        public void Linq2_GroupJoin_Expression()
+        {
+            var result = from customer in dataSource.Customers
+                         join supplier in dataSource.Suppliers
+                         on customer.City equals supplier.City into suppliers
+                         select new
+                         {
+                             Customer = customer.CompanyName,
+                             City = customer.City,
+                             Suppliers = suppliers
+                         };
 
             foreach (var c in result)
             {
@@ -293,6 +338,67 @@ namespace SampleQueries
             {
                 ObjectDumper.Write(item);
             }
+        }
+
+        [Category("Restriction Operators")]
+        [Title("Where - Task 15")]
+        [Description("Вывести клиентов, которые заказывали товары только у одного поставщика, сортировать по количеству потраченных денег.")]
+
+        public void Linq11()
+        {
+
+            var result = dataSource.Customers.Select(c => new
+            {
+                customer = c.CustomerID,
+                totalSumOfOrders = c.Orders.Any() ? c.Orders.Sum(o => o.Total) : 0,
+                orders = c.Orders
+            })
+            .OrderBy(o => o.totalSumOfOrders);
+
+            foreach (var item in result)
+            {
+                var firstItem = item.orders.FirstOrDefault();
+                string supplier = firstItem != null ? firstItem.SupplierName : null;
+
+                if (supplier != null && item.orders.All(i => i.SupplierName == supplier))
+                {
+                    ObjectDumper.Write(item.customer);
+                }
+            }
+        }
+
+        [Category("Restriction Operators")]
+        [Title("Where - Task 16")]
+        [Description("найти первые K клиентов, у которых было сделано больше N заказов на сумму не меньше S у одного поставщика, вывести их, а также города, где они делали заказы")]
+
+        public void Linq12()
+        {
+            var k = 2;
+            var n = 3; // amount of orders
+            var s = 100;
+            var result = dataSource.Customers.Select(c => new
+            {
+                customer = c.CustomerID,
+                city = c.City,
+                ordersCount = c.Orders.Any() ? c.Orders.Count() : 0,
+                orders = c.Orders.GroupBy(o => o.SupplierName)
+            })
+            .Where(item => item.orders.Any(a => a.Count() > n && a.Sum(o => o.Total) > s))
+            .Take(k);
+            if(true)
+            {
+                ObjectDumper.Write(result);
+            }
+            //foreach (var item in result)
+            //{
+            //    var firstItem = item.orders.FirstOrDefault();
+            //    string supplier = firstItem != null ? firstItem.SupplierName : null;
+
+            //    if (supplier != null && item.orders.All(i => i.SupplierName == supplier))
+            //    {
+            //        ObjectDumper.Write(item.customer);
+            //    }
+            //}
         }
     }
 
