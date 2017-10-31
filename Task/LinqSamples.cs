@@ -186,6 +186,19 @@ namespace SampleQueries
         }
 
         [Category("Restriction Operators")]
+        [Title("Where - Task 7")]
+        [Description("This sample return clients who has order with price more than X")]
+
+        public void Linq3_Expression()
+        {
+            decimal maxPrice = 9000;
+            var result = from customer in dataSource.Customers
+                         where customer.Orders.Any(o => o.Total > maxPrice)
+                         select customer.CompanyName;
+            ObjectDumper.Write(result);
+        }
+
+        [Category("Restriction Operators")]
         [Title("Where - Task 8")]
         [Description("This sample return clients with date of their first ordering")]
 
@@ -218,6 +231,30 @@ namespace SampleQueries
                     .ThenByDescending(o => o.totalSumOfOrders)
                     .ThenBy(o => o.customerName)
             );
+        }
+
+        [Category("Restriction Operators")]
+        [Title("Where - Task 9")]
+        [Description("This sample return clients with date of their first ordering")]
+
+        public void Linq5_Expression()
+        {
+            var newCustomerItems = from cusomer in dataSource.Customers
+                         select new
+                         {
+                             customerName = cusomer.CompanyName,
+                             totalSumOfOrders = cusomer.Orders.Any() ? cusomer.Orders.Sum(o => o.Total) : 0,
+                             firstOrder = cusomer.Orders.Any() ? cusomer.Orders.Min(o => o.OrderDate) : (DateTime?)null
+                         };
+
+            var result = from item in newCustomerItems
+                         orderby item.firstOrder.Value.Year
+                         orderby item.firstOrder.Value.Month
+                         orderby item.totalSumOfOrders descending
+                         orderby item.customerName
+                         select item;
+
+            ObjectDumper.Write(result);
         }
 
         [Category("Restriction Operators")]
@@ -299,6 +336,7 @@ namespace SampleQueries
             }
         }
 
+
         [Category("Restriction Operators")]
         [Title("Where - Task 13")]
         [Description("This sample return cite revenue and sell intensity")]
@@ -315,6 +353,25 @@ namespace SampleQueries
                 });
             ObjectDumper.Write(result);
         }
+
+        //[Category("Restriction Operators")]
+        //[Title("Where - Task 13")]
+        //[Description("This sample return cite revenue and sell intensity")]
+
+        //public void Linq9_Expression()
+        //{
+        //    var result = from customer in dataSource.Customers
+        //                 group customer by customer.City into custGroup
+        //                 select new
+        //                 {
+        //                     city = custGroup.Key,
+        //                     intensity = custGroup.Sum(i => i.Orders.Count()) / custGroup.Count(),
+        //                     sum = (from c in custGroup
+        //                            where (c.Orders.Any()).Average(c => c.Orders.Sum(o => o.Total)))
+        //                 };
+
+        //    ObjectDumper.Write(result);
+        //}
 
         [Category("Restriction Operators")]
         [Title("Where - Task 14")]
@@ -399,6 +456,14 @@ namespace SampleQueries
             //        ObjectDumper.Write(item.customer);
             //    }
             //}
+        }
+
+        [Category("Restriction Operators")]
+        [Title("Where - Task 16")]
+        [Description("Вывести первые K продуктов, которые пользовались наибольшей популярностью за заданный промежуток времени . Наибольшую популярность считать двумя способами(т.е. будет два запроса): ")]
+
+        public void Linq13()
+        {
         }
     }
 
