@@ -1,0 +1,6 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.exe.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplication\bin\Debug\ConsoleApplication.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplication\obj\Debug\ConsoleApplication.pdb

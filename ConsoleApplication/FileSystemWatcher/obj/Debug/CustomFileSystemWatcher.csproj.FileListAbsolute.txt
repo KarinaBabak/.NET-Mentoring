@@ -1,0 +1,1 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FileSystemWatcher\obj\Debug\CustomFileSystemWatcher.csprojResolveAssemblyReference.cache
