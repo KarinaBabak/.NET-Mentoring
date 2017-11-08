@@ -52,12 +52,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FileSystemWatcher\CustomFileSystemWatcher.csproj">
-      <Project>{a836941a-9cd9-49b3-83e4-95c951ddf9e6}</Project>
-      <Name>CustomFileSystemWatcher</Name>
+    <ProjectReference Include="..\CustomFilesWatcher\CustomFilesWatcher.csproj">
+      <Project>{50fa1c3b-8b3e-4644-83f4-bcb389c069ce}</Project>
+      <Name>CustomFilesWatcher</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

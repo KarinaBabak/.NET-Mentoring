@@ -18,5 +18,11 @@ namespace CustomFileSystemWatcher.Config.Sections
         {
             get { return (RuleElementCollection)base["rules"]; }
         }
+
+        [ConfigurationProperty("culture")]
+        public CultureConfigElement CultulreInfo
+        {
+            get { return ((CultureConfigElement)(base["culture"])); }
+        }
     }
 }

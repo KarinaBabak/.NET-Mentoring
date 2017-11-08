@@ -1,0 +1,6 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\bin\Debug\CustomFilesWatcher.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\bin\Debug\CustomFilesWatcher.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\bin\Debug\NLog.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\bin\Debug\NLog.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\obj\Debug\CustomFilesWatcher.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\obj\Debug\CustomFilesWatcher.pdb

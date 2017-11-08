@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "Conso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFileSystemWatcher", "FileSystemWatcher\CustomFileSystemWatcher.csproj", "{A836941A-9CD9-49B3-83E4-95C951DDF9E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomFilesWatcher", "CustomFilesWatcher\CustomFilesWatcher.csproj", "{50FA1C3B-8B3E-4644-83F4-BCB389C069CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A836941A-9CD9-49B3-83E4-95C951DDF9E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A836941A-9CD9-49B3-83E4-95C951DDF9E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A836941A-9CD9-49B3-83E4-95C951DDF9E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50FA1C3B-8B3E-4644-83F4-BCB389C069CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50FA1C3B-8B3E-4644-83F4-BCB389C069CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50FA1C3B-8B3E-4644-83F4-BCB389C069CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50FA1C3B-8B3E-4644-83F4-BCB389C069CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

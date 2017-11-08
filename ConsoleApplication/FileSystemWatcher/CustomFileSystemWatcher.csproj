@@ -47,22 +47,30 @@
   <ItemGroup>
     <Compile Include="Config\Collections\FolderElementCollection.cs" />
     <Compile Include="Config\Collections\RuleElementCollection.cs" />
+    <Compile Include="Config\Elements\CultureConfigElement.cs" />
     <Compile Include="Config\Elements\FolderConfigElement.cs" />
     <Compile Include="Config\Elements\RuleConfigElement.cs" />
     <Compile Include="Config\Sections\FileSystemWatcherConfigSection.cs" />
     <Compile Include="CustomFileSystemWatcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RuleOptions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NLog.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="NLog.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Messages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Messages.ru-RU.resx" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

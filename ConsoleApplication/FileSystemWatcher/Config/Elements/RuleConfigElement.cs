@@ -20,16 +20,16 @@ namespace CustomFileSystemWatcher.Config.Elements
         }
 
         [ConfigurationProperty("includeDate", DefaultValue = "false", IsKey = false, IsRequired = false)]
-        public bool IncludeDate
+        public RuleOptions IncludeDate
         {
-            get { return (bool)base["includeDate"]; }
+            get { return (RuleOptions)base["includeDate"]; }
             set { base["includeDate"] = value; }
         }
 
         [ConfigurationProperty("includeIndex", DefaultValue = "false", IsKey = false, IsRequired = false)]
-        public bool IncludeIndex
+        public RuleOptions IncludeIndex
         {
-            get { return (bool)base["includeIndex"]; }
+            get { return (RuleOptions)base["includeIndex"]; }
             set { base["includeIndex"] = value; }
         }
     }
