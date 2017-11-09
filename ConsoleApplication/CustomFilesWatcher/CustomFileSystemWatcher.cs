@@ -3,13 +3,14 @@ using System.IO;
 using System.Collections.Generic;
 using System.Configuration;
 using CustomFilesWatcher.Config.Elements;
-using CustomFilesWatcher.Config.Collections;
 using CustomFilesWatcher.Config.Sections;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using NLog;
 using System.Threading;
+using CustomFilesWatcher.Resources;
+using System.Text.RegularExpressions;
 //using CustomFilesWatcher.Resources;
 
 namespace CustomFilesWatcher
@@ -30,7 +31,6 @@ namespace CustomFilesWatcher
             // Get the section from configuration file.
             var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
-            var section = config.Sections["fileSystemWatcher"];
             configSection = ConfigurationManager.GetSection("fileSystemWatcher") as FileSystemWatcherConfigSection;
             _logger = LogManager.GetLogger(typeof(CustomFileSystemWatcher).Name);
 
@@ -52,7 +52,7 @@ namespace CustomFilesWatcher
             foreach (var rule in configSection.RulesCollection)
             {
                 RuleConfigElement ruleElement = (RuleConfigElement)rule;
-                rules.Add(ruleElement.Path, ruleElement.Filter);
+                rules.Add(ruleElement.Filter, ruleElement.Path);
                 rulesOptions.Add(ruleElement.Path, new int[2] { (int)ruleElement.IncludeDate, (int)ruleElement.IncludeIndex });
             }
 
@@ -66,35 +66,35 @@ namespace CustomFilesWatcher
         {
             foreach (var watcher in fileSystemWatchers)
             {
-                watcher.Changed += new FileSystemEventHandler(OnChanged);
+                //watcher.Changed += new FileSystemEventHandler(OnChanged);
                 watcher.Created += new FileSystemEventHandler(OnChanged);
                 watcher.EnableRaisingEvents = true;
-                //_logger.Info(Messages.BeginWatching);
+                _logger.Info(Messages.BeginWatching);
             }
         }
 
         private void OnChanged(object source, FileSystemEventArgs args)
         {
-            //_logger.Info(Messages.FileChanged);
-            var actualRules = rules.Where(rule => rule.Key == args.FullPath);
+            _logger.Info(Messages.FileChanged);
+            var rule = rules.Where(r => Regex.IsMatch(args.FullPath, r.Key) == true).FirstOrDefault();
 
-            foreach (var rule in actualRules)
+            var currentRuleOptions = rulesOptions.FirstOrDefault(pair => pair.Key == rule.Value).Value;
+            var fileName = TransformFileName(args.Name, rule.Key, currentRuleOptions);
+            var newPath = Path.Combine(rule.Value, fileName);
+
+            _logger.Info(Messages.RuleFound);
+
+            if (File.Exists(newPath))
             {
-                var currentRuleOptions = rulesOptions.FirstOrDefault(pair => pair.Key == rule.Key).Value;
-                var fileName = TransformFileName(args.Name, rule.Key, currentRuleOptions);
-                var newPath = Path.Combine(rule.Key, fileName);
-
-                //_logger.Log(Resources.FileCopyToStart, args.FullPath, destPath);
-                //_logger.Info(Messages.RuleFound);
-
-                if (File.Exists(newPath))
-                {
-                    File.Delete(newPath);
-                }
-
-                File.Move(args.FullPath, newPath);
+                File.Delete(newPath);
+                _logger.Info(Messages.FileRemoved);
             }
 
+            File.Move(args.FullPath, newPath);
+            if (File.Exists(newPath))
+            {
+                _logger.Info(Messages.FileMoved);
+            }
         }
 
         /// <summary>

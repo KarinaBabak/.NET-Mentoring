@@ -4,3 +4,9 @@ D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatch
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\bin\Debug\NLog.xml
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\obj\Debug\CustomFilesWatcher.dll
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\obj\Debug\CustomFilesWatcher.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\obj\Debug\CustomFilesWatcher.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\bin\Debug\ru-RU\CustomFilesWatcher.resources.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\obj\Debug\CustomFilesWatcher.Resources.Messages.resources
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\obj\Debug\CustomFilesWatcher.Resources.Messages.ru-RU.resources
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\obj\Debug\CustomFilesWatcher.csproj.GenerateResource.Cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\CustomFilesWatcher\obj\Debug\ru-RU\CustomFilesWatcher.resources.dll

@@ -4,8 +4,12 @@ using CustomFilesWatcher.Config.Elements;
 
 namespace CustomFilesWatcher.Config.Collections
 {
+    [ConfigurationCollection(typeof(FolderConfigElement))]
     public class FolderElementCollection : ConfigurationElementCollection
     {
+        protected override string ElementName => "folder";
+        public override ConfigurationElementCollectionType CollectionType => ConfigurationElementCollectionType.BasicMap;
+
         protected override ConfigurationElement CreateNewElement()
         {
             return new FolderConfigElement();
@@ -17,12 +21,12 @@ namespace CustomFilesWatcher.Config.Collections
 
         }
 
-        [ConfigurationCollection(typeof(FolderConfigElement),
-            AddItemName = "folder")]
-        [ConfigurationProperty("folders")]
-        public FolderElementCollection Folders
-        {
-            get { return (FolderElementCollection)base["folders"]; }
-        }
+        //[ConfigurationCollection(typeof(FolderConfigElement),
+        //    AddItemName = "folder")]
+        //[ConfigurationProperty("folders")]
+        //public FolderElementCollection Folders
+        //{
+        //    get { return (FolderElementCollection)base["folders"]; }
+        //}
     }
 }
