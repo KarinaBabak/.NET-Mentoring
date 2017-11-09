@@ -23,6 +23,7 @@ namespace CustomFilesWatcher
         private readonly Logger _logger = LogManager.GetLogger(typeof(CustomFileSystemWatcher).FullName);
         private readonly Dictionary<string, string> rules = new Dictionary<string, string>();
         private readonly Dictionary<string, int[]> rulesOptions = new Dictionary<string, int[]>();
+        CultureInfo currentCulture;
 
         private readonly string dateTimeFormat;
 
@@ -39,8 +40,9 @@ namespace CustomFilesWatcher
                 throw new ArgumentNullException(nameof(configSection));
             }
 
-            Thread.CurrentThread.CurrentCulture = new CultureInfo(configSection.CultulreInfo.Value);
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(configSection.CultulreInfo.Value);
+            currentCulture = new CultureInfo(configSection.CultulreInfo.Value);
+            Thread.CurrentThread.CurrentCulture = currentCulture;
+            Thread.CurrentThread.CurrentUICulture = currentCulture;
 
             // add folders to listen changes
             foreach (var folder in configSection.FoldersCollection)
@@ -66,7 +68,6 @@ namespace CustomFilesWatcher
         {
             foreach (var watcher in fileSystemWatchers)
             {
-                //watcher.Changed += new FileSystemEventHandler(OnChanged);
                 watcher.Created += new FileSystemEventHandler(OnChanged);
                 watcher.EnableRaisingEvents = true;
                 _logger.Info(Messages.BeginWatching);
@@ -111,7 +112,7 @@ namespace CustomFilesWatcher
             {
                 if (option == (int)RuleOptions.IncludeDate)
                 {
-                    var date = dateTimeFormat == null ? string.Empty : DateTime.Now.ToString(dateTimeFormat);
+                    var date = DateTime.Now.ToString("d", currentCulture);
                     fileName += "_" + date;
                 }
 
