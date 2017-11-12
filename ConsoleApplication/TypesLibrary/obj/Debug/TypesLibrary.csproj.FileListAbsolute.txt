@@ -1,0 +1,7 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task5_Reflection\ConsoleApplication\TypesLibrary\bin\Debug\TypesLibrary.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task5_Reflection\ConsoleApplication\TypesLibrary\bin\Debug\TypesLibrary.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task5_Reflection\ConsoleApplication\TypesLibrary\bin\Debug\CustomIoCContainer.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task5_Reflection\ConsoleApplication\TypesLibrary\bin\Debug\CustomIoCContainer.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task5_Reflection\ConsoleApplication\TypesLibrary\obj\Debug\TypesLibrary.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task5_Reflection\ConsoleApplication\TypesLibrary\obj\Debug\TypesLibrary.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task5_Reflection\ConsoleApplication\TypesLibrary\obj\Debug\TypesLibrary.pdb
