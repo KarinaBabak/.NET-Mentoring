@@ -15,7 +15,7 @@ using System.Text.RegularExpressions;
 
 namespace CustomFilesWatcher
 {
-    public class CustomFileSystemWatcher
+    public class CustomFileSystemWatcher : ICustomWatcher
     {
         private readonly List<FileSystemWatcher> fileSystemWatchers = new List<FileSystemWatcher>();
         private readonly string defaultFolderPath = "D:/test";
@@ -47,7 +47,12 @@ namespace CustomFilesWatcher
             // add folders to listen changes
             foreach (var folder in configSection.FoldersCollection)
             {
-                fileSystemWatchers.Add(new FileSystemWatcher(((FolderConfigElement)folder).Path));
+                string path = ((FolderConfigElement)folder).Path;
+                if (!File.Exists(path))
+                {
+                    throw new ArgumentNullException("The folder does not exist");
+                }
+                fileSystemWatchers.Add(new FileSystemWatcher(path));
             }
 
             // add values to rules dictionary
@@ -71,6 +76,19 @@ namespace CustomFilesWatcher
                 watcher.Created += new FileSystemEventHandler(OnChanged);
                 watcher.EnableRaisingEvents = true;
                 _logger.Info(Messages.BeginWatching);
+            }
+        }
+
+        /// <summary>
+        /// Remove event handlers and stop watching.
+        /// </summary>
+        public void UnSubscribeOnChanges()
+        {
+            foreach (var watcher in fileSystemWatchers)
+            {
+                watcher.Created -= new FileSystemEventHandler(OnChanged);
+                watcher.EnableRaisingEvents = false;
+                _logger.Info(Messages.StopWatching);
             }
         }
 
@@ -107,6 +125,10 @@ namespace CustomFilesWatcher
         /// <returns>new file name or not changed file name</returns>
         private string TransformFileName(string fileName, string filePath, int[] options)
         {
+            if(options == null)
+            {
+                return null;
+            }
 
             foreach (var option in options)
             {

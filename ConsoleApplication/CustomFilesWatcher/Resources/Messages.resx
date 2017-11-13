@@ -132,4 +132,7 @@
   <data name="RuleFound" xml:space="preserve">
     <value>Rule is found</value>
   </data>
+  <data name="StopWatching" xml:space="preserve">
+    <value>Stop watching</value>
+  </data>
 </root>

@@ -68,7 +68,15 @@ namespace CustomFilesWatcher.Resources {
                 return ResourceManager.GetString("BeginWatching", resourceCulture);
             }
         }
-        
+
+        internal static string StopWatching
+        {
+            get
+            {
+                return ResourceManager.GetString("StopWatching", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to File is changed:.
         /// </summary>

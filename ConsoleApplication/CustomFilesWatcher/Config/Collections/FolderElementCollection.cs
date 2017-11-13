@@ -8,7 +8,13 @@ namespace CustomFilesWatcher.Config.Collections
     public class FolderElementCollection : ConfigurationElementCollection
     {
         protected override string ElementName => "folder";
-        public override ConfigurationElementCollectionType CollectionType => ConfigurationElementCollectionType.BasicMap;
+        public override ConfigurationElementCollectionType CollectionType
+        {
+            get
+            {
+                return ConfigurationElementCollectionType.BasicMap;
+            }
+        }
 
         protected override ConfigurationElement CreateNewElement()
         {
@@ -20,13 +26,5 @@ namespace CustomFilesWatcher.Config.Collections
             return ((FolderConfigElement)element).Path;
 
         }
-
-        //[ConfigurationCollection(typeof(FolderConfigElement),
-        //    AddItemName = "folder")]
-        //[ConfigurationProperty("folders")]
-        //public FolderElementCollection Folders
-        //{
-        //    get { return (FolderElementCollection)base["folders"]; }
-        //}
     }
 }

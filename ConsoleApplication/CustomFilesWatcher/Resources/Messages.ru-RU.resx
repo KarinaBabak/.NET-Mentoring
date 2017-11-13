@@ -132,4 +132,7 @@
   <data name="RuleFound" xml:space="preserve">
     <value>Найдено провило</value>
   </data>
+  <data name="StopWatching" xml:space="preserve">
+    <value>Стоп мониторинга нескольких входящих папок</value>
+  </data>
 </root>
