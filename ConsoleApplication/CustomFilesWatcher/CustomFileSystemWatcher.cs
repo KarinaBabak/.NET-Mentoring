@@ -2,38 +2,53 @@
 using System.IO;
 using System.Collections.Generic;
 using System.Configuration;
-using CustomFilesWatcher.Config.Elements;
-using CustomFilesWatcher.Config.Sections;
+using ConfigFilesWatcher.Config.Elements;
+using ConfigFilesWatcher.Config.Sections;
 using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
-using NLog;
-using System.Threading;
-using CustomFilesWatcher.Resources;
-using System.Text.RegularExpressions;
-//using CustomFilesWatcher.Resources;
 
-namespace CustomFilesWatcher
+
+namespace ConfigFilesWatcher
 {
-    public class CustomFileSystemWatcher : ICustomWatcher
+    public static class CustomFileSystemWatcher
     {
-        private readonly List<FileSystemWatcher> fileSystemWatchers = new List<FileSystemWatcher>();
-        private readonly string defaultFolderPath = "D:/test";
-        private readonly FileSystemWatcherConfigSection configSection;
-        private readonly Logger _logger = LogManager.GetLogger(typeof(CustomFileSystemWatcher).FullName);
-        private readonly Dictionary<string, string> rules = new Dictionary<string, string>();
-        private readonly Dictionary<string, int[]> rulesOptions = new Dictionary<string, int[]>();
-        CultureInfo currentCulture;
+        private static readonly List<FileSystemWatcher> fileSystemWatchers = new List<FileSystemWatcher>();
+        private static readonly Dictionary<string, string> rules = new Dictionary<string, string>();
+        private static readonly Dictionary<string, int[]> rulesOptions = new Dictionary<string, int[]>();
+        private static CultureInfo currentCulture;
+        private static List<string> folders =  new List<string>();
 
-        private readonly string dateTimeFormat;
+        public static Dictionary<string, string> Rules
+        {
+            get { return rules; }
+        }
 
-        public CustomFileSystemWatcher()
+        public static Dictionary<string, int[]> RulesOptions
+        {
+            get { return rulesOptions; }
+        }
+
+        public static CultureInfo CurrentCultureInfo
+        {
+            get { return currentCulture; }
+        }
+
+        public static List<FileSystemWatcher> FilesWatchers
+        {
+            get { return fileSystemWatchers; }
+        }
+
+        public static List<string> FoldersPath
+        {
+            get { return folders; }
+        }
+
+        public static void Initialize()
         {
             // Get the section from configuration file.
             var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
-            configSection = ConfigurationManager.GetSection("fileSystemWatcher") as FileSystemWatcherConfigSection;
-            _logger = LogManager.GetLogger(typeof(CustomFileSystemWatcher).Name);
+            FileSystemWatcherConfigSection configSection = 
+                ConfigurationManager.GetSection("fileSystemWatcher") as FileSystemWatcherConfigSection;
 
             if (configSection == null)
             {
@@ -41,18 +56,11 @@ namespace CustomFilesWatcher
             }
 
             currentCulture = new CultureInfo(configSection.CultulreInfo.Value);
-            Thread.CurrentThread.CurrentCulture = currentCulture;
-            Thread.CurrentThread.CurrentUICulture = currentCulture;
 
             // add folders to listen changes
             foreach (var folder in configSection.FoldersCollection)
             {
-                string path = ((FolderConfigElement)folder).Path;
-                if (!File.Exists(path))
-                {
-                    throw new ArgumentNullException("The folder does not exist");
-                }
-                fileSystemWatchers.Add(new FileSystemWatcher(path));
+                folders.Add(((FolderConfigElement)folder).Path);
             }
 
             // add values to rules dictionary
@@ -62,100 +70,6 @@ namespace CustomFilesWatcher
                 rules.Add(ruleElement.Filter, ruleElement.Path);
                 rulesOptions.Add(ruleElement.Path, new int[2] { (int)ruleElement.IncludeDate, (int)ruleElement.IncludeIndex });
             }
-
-            SubscribeToChanges();
-        }
-
-        /// <summary>
-        /// Add event handlers and begin watching.
-        /// </summary>
-        public void SubscribeToChanges()
-        {
-            foreach (var watcher in fileSystemWatchers)
-            {
-                watcher.Created += new FileSystemEventHandler(OnChanged);
-                watcher.EnableRaisingEvents = true;
-                _logger.Info(Messages.BeginWatching);
-            }
-        }
-
-        /// <summary>
-        /// Remove event handlers and stop watching.
-        /// </summary>
-        public void UnSubscribeOnChanges()
-        {
-            foreach (var watcher in fileSystemWatchers)
-            {
-                watcher.Created -= new FileSystemEventHandler(OnChanged);
-                watcher.EnableRaisingEvents = false;
-                _logger.Info(Messages.StopWatching);
-            }
-        }
-
-        private void OnChanged(object source, FileSystemEventArgs args)
-        {
-            _logger.Info(Messages.FileChanged);
-            var rule = rules.Where(r => Regex.IsMatch(args.FullPath, r.Key) == true).FirstOrDefault();
-
-            var currentRuleOptions = rulesOptions.FirstOrDefault(pair => pair.Key == rule.Value).Value;
-            var fileName = TransformFileName(args.Name, rule.Key, currentRuleOptions);
-            var newPath = Path.Combine(rule.Value, fileName);
-
-            _logger.Info(Messages.RuleFound);
-
-            if (File.Exists(newPath))
-            {
-                File.Delete(newPath);
-                _logger.Info(Messages.FileRemoved);
-            }
-
-            File.Move(args.FullPath, newPath);
-            if (File.Exists(newPath))
-            {
-                _logger.Info(Messages.FileMoved);
-            }
-        }
-
-        /// <summary>
-        /// Transform file name according to rule options
-        /// </summary>
-        /// <param name="fileName">source file name</param>
-        /// <param name="filePath">source file path</param>
-        /// <param name="options">rule options</param>
-        /// <returns>new file name or not changed file name</returns>
-        private string TransformFileName(string fileName, string filePath, int[] options)
-        {
-            if(options == null)
-            {
-                return null;
-            }
-
-            foreach (var option in options)
-            {
-                if (option == (int)RuleOptions.IncludeDate)
-                {
-                    var date = DateTime.Now.ToString("d", currentCulture);
-                    fileName += "_" + date;
-                }
-
-                if (option == (int)RuleOptions.IncludeIndex)
-                {
-                    for (int i = 0; i < int.MaxValue; i++)
-                    {
-                        var targetPath = Path.Combine(defaultFolderPath, fileName + "_" + i);
-                        if (!File.Exists(targetPath))
-                        {
-                            fileName += "_" + i;
-                        }
-                        else
-                        {
-                            fileName += "_0";
-                        }
-                    }
-                }
-            }
-
-            return fileName;
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Configuration;
-using CustomFilesWatcher.Config.Elements;
+using ConfigFilesWatcher.Config.Elements;
 
-namespace CustomFilesWatcher.Config.Collections
+namespace ConfigFilesWatcher.Config.Collections
 {
     public class RuleElementCollection : ConfigurationElementCollection
     {

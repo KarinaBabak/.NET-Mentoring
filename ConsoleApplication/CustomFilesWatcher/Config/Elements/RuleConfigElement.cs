@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Configuration;
 
-namespace CustomFilesWatcher.Config.Elements
+namespace ConfigFilesWatcher.Config.Elements
 {
     public class RuleConfigElement : ConfigurationElement
     {

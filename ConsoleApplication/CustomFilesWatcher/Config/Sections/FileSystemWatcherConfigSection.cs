@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Configuration;
-using CustomFilesWatcher.Config.Collections;
-using CustomFilesWatcher.Config.Elements;
+using ConfigFilesWatcher.Config.Collections;
+using ConfigFilesWatcher.Config.Elements;
 
-namespace CustomFilesWatcher.Config.Sections
+namespace ConfigFilesWatcher.Config.Sections
 {
     public class FileSystemWatcherConfigSection : ConfigurationSection
     {

@@ -1,9 +1,9 @@
-﻿using System;
+﻿using FilesWatcher;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-//using CustomFilesWatcher;
 
 namespace ConsoleApplication
 {
@@ -11,8 +11,20 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            CustomFilesWatcher.CustomFileSystemWatcher fileSystemWatcher = new CustomFilesWatcher.CustomFileSystemWatcher();
-            //CustomFileSystemWatcher.CustomFileSystemWatcher fileSystemWatcher = new CustomFileSystemWatcher.CustomFileSystemWatcher();
+            ConfigFilesWatcher.CustomFileSystemWatcher.Initialize();
+            var rules = ConfigFilesWatcher.CustomFileSystemWatcher.Rules;
+            var options = ConfigFilesWatcher.CustomFileSystemWatcher.RulesOptions;
+            var culture = ConfigFilesWatcher.CustomFileSystemWatcher.CurrentCultureInfo;
+            var foldersPath = ConfigFilesWatcher.CustomFileSystemWatcher.FoldersPath;
+
+            CustomWatcher watcher = new CustomWatcher(
+                rules: rules,
+                rulesOptions: options,
+                currentCulture: culture,
+                folders: foldersPath
+                );
+
+            watcher.SubscribeToChanges();
             Console.ReadKey();
         }
     }

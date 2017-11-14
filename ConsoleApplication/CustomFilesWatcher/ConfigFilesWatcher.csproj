@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4A4AD114-A59C-4731-8234-971B8F7FD93B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{50FA1C3B-8B3E-4644-83F4-BCB389C069CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApplication</RootNamespace>
-    <AssemblyName>ConsoleApplication</AssemblyName>
+    <RootNamespace>CustomFilesWatcher</RootNamespace>
+    <AssemblyName>CustomFilesWatcher</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -38,6 +35,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,30 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Config\Collections\FolderElementCollection.cs" />
+    <Compile Include="Config\Collections\RuleElementCollection.cs" />
+    <Compile Include="Config\Elements\CultureConfigElement.cs" />
+    <Compile Include="Config\Elements\FolderConfigElement.cs" />
+    <Compile Include="Config\Elements\RuleConfigElement.cs" />
+    <Compile Include="Config\Sections\FileSystemWatcherConfigSection.cs" />
+    <Compile Include="CustomFileSystemWatcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RuleOptions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="NLog.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <None Include="NLog.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CustomFilesWatcher\ConfigFilesWatcher.csproj">
-      <Project>{50fa1c3b-8b3e-4644-83f4-bcb389c069ce}</Project>
-      <Name>ConfigFilesWatcher</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FilesWatcher\FilesWatcher.csproj">
-      <Project>{83a0a8c4-51b0-4dfc-9666-c206042197ed}</Project>
-      <Name>FilesWatcher</Name>
-    </ProjectReference>
+    <Folder Include="bin\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

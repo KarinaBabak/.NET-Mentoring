@@ -1,0 +1,11 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\bin\Debug\FilesWatcher.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\bin\Debug\FilesWatcher.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\bin\Debug\ru-RU\FilesWatcher.resources.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\bin\Debug\NLog.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\bin\Debug\NLog.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\obj\Debug\FilesWatcher.Resources.Messages.resources
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\obj\Debug\FilesWatcher.Resources.Messages.ru-RU.resources
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\obj\Debug\FilesWatcher.csproj.GenerateResource.Cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\obj\Debug\ru-RU\FilesWatcher.resources.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\obj\Debug\FilesWatcher.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\obj\Debug\FilesWatcher.pdb

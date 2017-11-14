@@ -10,3 +10,6 @@ D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplicati
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplication\bin\Debug\CustomFilesWatcher.dll
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplication\bin\Debug\CustomFilesWatcher.pdb
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplication\bin\Debug\ru-RU\CustomFilesWatcher.resources.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplication\bin\Debug\FilesWatcher.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplication\bin\Debug\FilesWatcher.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\ConsoleApplication\bin\Debug\ru-RU\FilesWatcher.resources.dll
