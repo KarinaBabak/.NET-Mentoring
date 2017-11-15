@@ -8,13 +8,7 @@ namespace ConfigFilesWatcher.Config.Collections
     public class FolderElementCollection : ConfigurationElementCollection
     {
         protected override string ElementName => "folder";
-        public override ConfigurationElementCollectionType CollectionType
-        {
-            get
-            {
-                return ConfigurationElementCollectionType.BasicMap;
-            }
-        }
+        public override ConfigurationElementCollectionType CollectionType => ConfigurationElementCollectionType.BasicMap;
 
         protected override ConfigurationElement CreateNewElement()
         {

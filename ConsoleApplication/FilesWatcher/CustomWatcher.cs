@@ -9,6 +9,7 @@ using NLog;
 using System.Text.RegularExpressions;
 using FilesWatcher.Resources;
 using System.Threading;
+using Models;
 
 namespace FilesWatcher
 {
@@ -45,11 +46,6 @@ namespace FilesWatcher
         {
             foreach (var folderPath in _folders)
             {
-                if (!File.Exists(folderPath))
-                {
-                    throw new ArgumentNullException("The folder does not exist");
-                }
-
                 _fileSystemWatchers.Add(new FileSystemWatcher(folderPath));
             }
         }
@@ -84,6 +80,11 @@ namespace FilesWatcher
         {
             _logger.Info(Messages.FileChanged);
             var rule = _rules.Where(r => Regex.IsMatch(args.FullPath, r.Key) == true).FirstOrDefault();
+
+            if(rule.Key == null)
+            {
+                return;
+            }
 
             var currentRuleOptions = _rulesOptions.FirstOrDefault(pair => pair.Key == rule.Value).Value;
             var fileName = TransformFileName(args.Name, rule.Key, currentRuleOptions);

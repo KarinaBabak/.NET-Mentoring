@@ -1,0 +1,4 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\Models\bin\Debug\Models.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\Models\bin\Debug\Models.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\Models\obj\Debug\Models.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\Models\obj\Debug\Models.pdb

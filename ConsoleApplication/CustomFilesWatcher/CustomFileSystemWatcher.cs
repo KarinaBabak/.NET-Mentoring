@@ -52,7 +52,7 @@ namespace ConfigFilesWatcher
 
             if (configSection == null)
             {
-                throw new ArgumentNullException(nameof(configSection));
+                throw new ArgumentNullException(String.Format("Config section {0} does not exist", nameof(configSection)));
             }
 
             currentCulture = new CultureInfo(configSection.CultulreInfo.Value);

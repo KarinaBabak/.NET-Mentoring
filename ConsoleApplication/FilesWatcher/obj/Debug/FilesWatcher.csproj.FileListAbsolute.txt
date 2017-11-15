@@ -9,3 +9,6 @@ D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\obj
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\obj\Debug\ru-RU\FilesWatcher.resources.dll
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\obj\Debug\FilesWatcher.dll
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\obj\Debug\FilesWatcher.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\bin\Debug\Models.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\bin\Debug\Models.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task4_BCL\ConsoleApplication\FilesWatcher\obj\Debug\FilesWatcher.csprojResolveAssemblyReference.cache
