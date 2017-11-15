@@ -49,6 +49,11 @@ namespace CustomIoCContainer
 
         public void AddType(Type type, Type baseType)
         {
+            if (type == null || baseType == null)
+            {
+                throw new ArgumentNullException("Can not add not existed type");
+            }
+
             mapper.Add(baseType, type);
         }
 

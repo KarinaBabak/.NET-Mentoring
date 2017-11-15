@@ -2,3 +2,4 @@ D:\Epam\.NET Mentoring D1-D2\Tasks\Task5_Reflection\ConsoleApplication\CustomIoC
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task5_Reflection\ConsoleApplication\CustomIoCContainer\bin\Debug\CustomIoCContainer.pdb
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task5_Reflection\ConsoleApplication\CustomIoCContainer\obj\Debug\CustomIoCContainer.dll
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task5_Reflection\ConsoleApplication\CustomIoCContainer\obj\Debug\CustomIoCContainer.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task5_Reflection\ConsoleApplication\CustomIoCContainer\obj\Debug\CustomIoCContainer.csprojResolveAssemblyReference.cache
