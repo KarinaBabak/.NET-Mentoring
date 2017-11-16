@@ -129,17 +129,9 @@ namespace FilesWatcher
 
                 if (option == (int)RuleOptions.IncludeIndex)
                 {
-                    for (int i = 0; i < int.MaxValue; i++)
+                    for (int i = 1; i < int.MaxValue; i++)
                     {
-                        var targetPath = Path.Combine(defaultFolderPath, fileName + "_" + i);
-                        if (!File.Exists(targetPath))
-                        {
-                            fileName += "_" + i;
-                        }
-                        else
-                        {
-                            fileName += "_0";
-                        }
+                        fileName = Path.Combine(defaultFolderPath, fileName + "_" + i);
                     }
                 }
             }

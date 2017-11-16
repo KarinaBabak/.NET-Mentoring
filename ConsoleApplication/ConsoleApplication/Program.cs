@@ -11,11 +11,11 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            ConfigFilesWatcher.CustomFileSystemWatcher.Initialize();
-            var rules = ConfigFilesWatcher.CustomFileSystemWatcher.Rules;
-            var options = ConfigFilesWatcher.CustomFileSystemWatcher.RulesOptions;
-            var culture = ConfigFilesWatcher.CustomFileSystemWatcher.CurrentCultureInfo;
-            var foldersPath = ConfigFilesWatcher.CustomFileSystemWatcher.FoldersPath;
+            ConfigFilesWatcher.ConfigSectionReader.LoadConfigSection();
+            var rules = ConfigFilesWatcher.ConfigSectionReader.Rules;
+            var options = ConfigFilesWatcher.ConfigSectionReader.RulesOptions;
+            var culture = ConfigFilesWatcher.ConfigSectionReader.CurrentCultureInfo;
+            var foldersPath = ConfigFilesWatcher.ConfigSectionReader.FoldersPath;
 
             CustomWatcher watcher = new CustomWatcher(
                 rules: rules,

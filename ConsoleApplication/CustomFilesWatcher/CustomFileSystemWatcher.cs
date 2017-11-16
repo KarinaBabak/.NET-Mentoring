@@ -9,9 +9,8 @@ using System.Globalization;
 
 namespace ConfigFilesWatcher
 {
-    public static class CustomFileSystemWatcher
+    public static class ConfigSectionReader
     {
-        private static readonly List<FileSystemWatcher> fileSystemWatchers = new List<FileSystemWatcher>();
         private static readonly Dictionary<string, string> rules = new Dictionary<string, string>();
         private static readonly Dictionary<string, int[]> rulesOptions = new Dictionary<string, int[]>();
         private static CultureInfo currentCulture;
@@ -32,17 +31,12 @@ namespace ConfigFilesWatcher
             get { return currentCulture; }
         }
 
-        public static List<FileSystemWatcher> FilesWatchers
-        {
-            get { return fileSystemWatchers; }
-        }
-
         public static List<string> FoldersPath
         {
             get { return folders; }
         }
 
-        public static void Initialize()
+        public static void LoadConfigSection()
         {
             // Get the section from configuration file.
             var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
