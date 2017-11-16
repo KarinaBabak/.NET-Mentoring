@@ -26,24 +26,13 @@ namespace Reflection.Tests
         }
 
         [Test]
+        [TestCase(null)]
+        [TestCase(null, null)]
+        [TestCase(typeof(int), null)]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void AddType_NullType_ExpectArgumentNullException()
+        public void AddType_NullType_ExpectArgumentNullException(Type type1, Type type2)
         {
             container.AddType(null);
-        }
-
-        [Test]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void AddTypeWithTwoParameters_NullTypes_ExpectArgumentNullException()
-        {
-            container.AddType(null, null);
-        }
-
-        [Test]
-        [ExpectedException(typeof(ArgumentNullException))]
-        public void AddTypeWithTwoParameters_OneNullType_ExpectArgumentNullException()
-        {
-            container.AddType(null, typeof(int));
         }
 
         [Test]
