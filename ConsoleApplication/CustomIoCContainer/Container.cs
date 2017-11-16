@@ -37,17 +37,7 @@ namespace CustomIoCContainer
             }
         }
 
-        public void AddType(Type type)
-        {
-            if(type == null)
-            {
-                throw new ArgumentNullException("Can not add not existed type");
-            }
-
-            AddType(type, type);
-        }
-
-        public void AddType(Type type, Type baseType)
+        public void AddType(Type type, Type baseType = null)
         {
             if (type == null || baseType == null)
             {

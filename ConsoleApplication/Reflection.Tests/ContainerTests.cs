@@ -7,7 +7,7 @@ using NUnit.Framework;
 namespace Reflection.Tests
 {
     [TestFixture]
-    public class UnitTest1
+    public class ContainerTests
     {
         private Assembly assembly = Assembly.LoadFrom("TypesLibrary");
         Container container;

@@ -7,8 +7,6 @@ namespace CustomIoCContainer
     {
         void AddAssembly(Assembly assembly);
 
-        void AddType(Type type);
-
         void AddType(Type type, Type baseType);
 
         object CreateInstance(Type type);
