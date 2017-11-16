@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NLog;
 using System.Text.RegularExpressions;
 using FilesWatcher.Resources;
@@ -15,12 +13,12 @@ namespace FilesWatcher
 {
     public class CustomWatcher : ICustomWatcher
     {
-        private readonly List<FileSystemWatcher> _fileSystemWatchers = new List<FileSystemWatcher>();
-        private readonly Logger _logger = LogManager.GetCurrentClassLogger();
-        private readonly Dictionary<string, string> _rules = new Dictionary<string, string>();
-        private readonly Dictionary<string, int[]> _rulesOptions = new Dictionary<string, int[]>();
-        private readonly List<string> _folders = new List<string>();
-        private CultureInfo _currentCulture;
+        private readonly List<FileSystemWatcher> fileSystemWatchers = new List<FileSystemWatcher>();
+        private readonly Logger logger = LogManager.GetCurrentClassLogger();
+        private readonly Dictionary<string, string> rules = new Dictionary<string, string>();
+        private readonly Dictionary<string, int[]> rulesOptions = new Dictionary<string, int[]>();
+        private readonly List<string> folders = new List<string>();
+        private CultureInfo currentCulture;
         private readonly string defaultFolderPath = "C:/";
 
         public CustomWatcher(
@@ -29,13 +27,13 @@ namespace FilesWatcher
             CultureInfo currentCulture,
             List<string> folders)
         {
-            _rules = rules;
-            _rulesOptions = rulesOptions;
-            _currentCulture = currentCulture;
-            _folders = folders;
+            this.rules = rules;
+            this.rulesOptions = rulesOptions;
+            this.currentCulture = currentCulture;
+            this.folders = folders;
 
-            Thread.CurrentThread.CurrentCulture = _currentCulture;
-            Thread.CurrentThread.CurrentUICulture = _currentCulture;
+            Thread.CurrentThread.CurrentCulture = this.currentCulture;
+            Thread.CurrentThread.CurrentUICulture = this.currentCulture;
 
             InitFilesWatchers();
         }
@@ -44,9 +42,9 @@ namespace FilesWatcher
 
         private void InitFilesWatchers()
         {
-            foreach (var folderPath in _folders)
+            foreach (var folderPath in folders)
             {
-                _fileSystemWatchers.Add(new FileSystemWatcher(folderPath));
+                fileSystemWatchers.Add(new FileSystemWatcher(folderPath));
             }
         }
 
@@ -55,53 +53,53 @@ namespace FilesWatcher
         /// </summary>
         public void SubscribeToChanges()
         {
-            foreach (var watcher in _fileSystemWatchers)
+            foreach (var watcher in fileSystemWatchers)
             {
                 watcher.Created += new FileSystemEventHandler(OnChanged);
                 watcher.EnableRaisingEvents = true;
-                _logger.Info(Messages.BeginWatching);
+                logger.Info(Messages.BeginWatching);
             }
         }
 
         /// <summary>
         /// Remove event handlers and stop watching.
         /// </summary>
-        public void UnSubscribeOnChanges()
+        public void UnSubscribe()
         {
-            foreach (var watcher in _fileSystemWatchers)
+            foreach (var watcher in fileSystemWatchers)
             {
                 watcher.Created -= new FileSystemEventHandler(OnChanged);
                 watcher.EnableRaisingEvents = false;
-                _logger.Info(Messages.StopWatching);
+                logger.Info(Messages.StopWatching);
             }
         }
 
         private void OnChanged(object source, FileSystemEventArgs args)
         {
-            _logger.Info(Messages.FileChanged);
-            var rule = _rules.Where(r => Regex.IsMatch(args.FullPath, r.Key) == true).FirstOrDefault();
+            logger.Info(Messages.FileChanged);
+            var rule = rules.Where(r => Regex.IsMatch(args.FullPath, r.Key) == true).FirstOrDefault();
 
             if(rule.Key == null)
             {
                 return;
             }
 
-            var currentRuleOptions = _rulesOptions.FirstOrDefault(pair => pair.Key == rule.Value).Value;
+            var currentRuleOptions = rulesOptions.FirstOrDefault(pair => pair.Key == rule.Value).Value;
             var fileName = TransformFileName(args.Name, rule.Key, currentRuleOptions);
             var newPath = Path.Combine(rule.Value, fileName);
 
-            _logger.Info(Messages.RuleFound);
+            logger.Info(Messages.RuleFound);
 
             if (File.Exists(newPath))
             {
                 File.Delete(newPath);
-                _logger.Info(Messages.FileRemoved);
+                logger.Info(Messages.FileRemoved);
             }
 
             File.Move(args.FullPath, newPath);
             if (File.Exists(newPath))
             {
-                _logger.Info(Messages.FileMoved);
+                logger.Info(Messages.FileMoved);
             }
         }
 
@@ -123,7 +121,7 @@ namespace FilesWatcher
             {
                 if (option == (int)RuleOptions.IncludeDate)
                 {
-                    var date = DateTime.Now.ToString("d", _currentCulture);
+                    var date = DateTime.Now.ToString("d", currentCulture);
                     fileName += "_" + date;
                 }
 

@@ -1,11 +1,9 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using System.Configuration;
 using ConfigFilesWatcher.Config.Elements;
 using ConfigFilesWatcher.Config.Sections;
 using System.Globalization;
-
 
 namespace ConfigFilesWatcher
 {

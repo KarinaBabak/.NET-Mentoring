@@ -51,7 +51,7 @@
     <Compile Include="Config\Elements\FolderConfigElement.cs" />
     <Compile Include="Config\Elements\RuleConfigElement.cs" />
     <Compile Include="Config\Sections\FileSystemWatcherConfigSection.cs" />
-    <Compile Include="CustomFileSystemWatcher.cs" />
+    <Compile Include="ConfigSectionReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
