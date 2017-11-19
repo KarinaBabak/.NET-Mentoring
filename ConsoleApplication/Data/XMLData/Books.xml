@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<book>
+  <name>PRIDE AND PREJUDICE</name>
+  <author>
+    <firstName>Jane</firstName>
+    <lastName>Austen</lastName>
+  </author>
+  <publish>
+    <publisher></publisher>
+    <year></year>
+  </publish>
+  <pageCount></pageCount>
+  <notes></notes>
+  <isbn></isbn>
+</book>
