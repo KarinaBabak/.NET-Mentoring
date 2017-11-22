@@ -2,9 +2,9 @@
 
 namespace TypesLibrary
 {
-    public class ClassImport
+    public class ImportClass
     {
         [Import]
-        public ClassExport ExportClass{ get; set; }
+        public SuperClass SuperObject { get; set; }
     }
 }

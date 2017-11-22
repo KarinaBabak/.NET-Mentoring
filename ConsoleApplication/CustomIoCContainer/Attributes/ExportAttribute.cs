@@ -9,6 +9,8 @@ namespace CustomIoCContainer.Attributes
     [AttributeUsage(AttributeTargets.Class)]
     public class ExportAttribute : Attribute
     {
+        public Type Contract { get; set; }
+
         public ExportAttribute()
         { }
 
@@ -16,7 +18,5 @@ namespace CustomIoCContainer.Attributes
         {
             Contract = contract;
         }
-
-        public Type Contract { get; private set; }
     }
 }

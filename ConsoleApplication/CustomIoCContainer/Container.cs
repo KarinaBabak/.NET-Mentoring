@@ -64,11 +64,6 @@ namespace CustomIoCContainer
 
             var createdType = Activator.CreateInstance(baseType);
 
-            if (ctorInfo != null)
-            {
-                var parameters = ctorInfo.GetParameters();
-            }
-
             SetPropertiesValues(createdType);
 
             return createdType;

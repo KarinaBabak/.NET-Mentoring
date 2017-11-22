@@ -2,8 +2,8 @@
 
 namespace TypesLibrary
 {
-    [Export]
-    public class ClassExport
+    [Export(typeof(ISuperInterface))]
+    public class ExportClass
     {
     }
 }
