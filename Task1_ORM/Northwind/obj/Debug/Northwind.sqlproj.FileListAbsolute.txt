@@ -1,0 +1,3 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task1_ORM\Northwind\sql\debug\Northwind.dacpac
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task1_ORM\Northwind\obj\Debug\Northwind.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task1_ORM\Northwind\obj\Debug\Northwind.pdb

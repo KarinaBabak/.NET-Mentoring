@@ -1,0 +1,13 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\bin\Debug\Task2_EF.dll.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\bin\Debug\Task2_EF.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\bin\Debug\Task2_EF.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\bin\Debug\EntityFramework.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\bin\Debug\EntityFramework.SqlServer.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\bin\Debug\EntityFramework.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\bin\Debug\EntityFramework.SqlServer.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\obj\Debug\Task2_EF.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\obj\Debug\Task2_EF.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\obj\Debug\Task2_EF.Migrations.Version_1.resources
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\obj\Debug\Task2_EF.csproj.GenerateResource.Cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\obj\Debug\Task2_EF.Migrations.Version_11.resources
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF\obj\Debug\Task2_EF.Migrations.Version_13.resources

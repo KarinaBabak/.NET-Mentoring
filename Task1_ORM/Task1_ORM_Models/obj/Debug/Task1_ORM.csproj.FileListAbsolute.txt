@@ -1,0 +1,8 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task1_ORM\Task1_ORM_Models\bin\Debug\Task1_ORM_Models.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task1_ORM\Task1_ORM_Models\bin\Debug\Task1_ORM_Models.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task1_ORM\Task1_ORM_Models\bin\Debug\linq2db.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task1_ORM\Task1_ORM_Models\bin\Debug\linq2db.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task1_ORM\Task1_ORM_Models\bin\Debug\linq2db.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task1_ORM\Task1_ORM_Models\obj\Debug\Task1_ORM.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task1_ORM\Task1_ORM_Models\obj\Debug\Task1_ORM_Models.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task1_ORM\Task1_ORM_Models\obj\Debug\Task1_ORM_Models.pdb

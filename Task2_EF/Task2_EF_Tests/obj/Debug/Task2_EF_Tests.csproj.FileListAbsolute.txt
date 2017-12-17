@@ -1,0 +1,14 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\bin\Debug\Task2_EF_Tests.dll.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\bin\Debug\Task2_EF_Tests.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\bin\Debug\Task2_EF_Tests.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\bin\Debug\EntityFramework.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\bin\Debug\EntityFramework.SqlServer.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\bin\Debug\Task2_EF.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\bin\Debug\Task2_EF.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\bin\Debug\EntityFramework.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\bin\Debug\EntityFramework.SqlServer.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\obj\Debug\Task2_EF_Tests.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\obj\Debug\Task2_EF_Tests.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task8_ORM\Task2_EF\Task2_EF_Tests\obj\Debug\Task2_EF_Tests.pdb
