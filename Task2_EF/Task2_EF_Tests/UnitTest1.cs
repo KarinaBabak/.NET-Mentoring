@@ -16,7 +16,6 @@ namespace Task2_EF_Tests
         [TestMethod]
         public void GetOrdersByCategory_Test()
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<NorthwindContext, Task2_EF.Migrations.Configuration>());
             int categoryId = 4;
             using (var dbConnetion = new NorthwindContext())
             {
