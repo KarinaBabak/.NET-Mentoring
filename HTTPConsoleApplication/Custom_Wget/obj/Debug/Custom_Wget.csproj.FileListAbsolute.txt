@@ -1,0 +1,10 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task10_HTTP\HTTPConsoleApplication\Custom_Wget\bin\Debug\Custom_Wget.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task10_HTTP\HTTPConsoleApplication\Custom_Wget\bin\Debug\Custom_Wget.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task10_HTTP\HTTPConsoleApplication\Custom_Wget\obj\Debug\Custom_Wget.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task10_HTTP\HTTPConsoleApplication\Custom_Wget\obj\Debug\Custom_Wget.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task10_HTTP\HTTPConsoleApplication\Custom_Wget\obj\Debug\Custom_Wget.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task10_HTTP\HTTPConsoleApplication\Custom_Wget\bin\Debug\HtmlAgilityPack.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task10_HTTP\HTTPConsoleApplication\Custom_Wget\bin\Debug\HtmlAgilityPack.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task10_HTTP\HTTPConsoleApplication\Custom_Wget\bin\Debug\HtmlAgilityPack.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task10_HTTP\HTTPConsoleApplication\Custom_Wget\bin\Debug\NLog.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task10_HTTP\HTTPConsoleApplication\Custom_Wget\bin\Debug\NLog.xml
