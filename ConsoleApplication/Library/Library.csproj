@@ -41,6 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Catalog.cs" />
+    <Compile Include="Entities\Author.cs" />
+    <Compile Include="Entities\Book.cs" />
+    <Compile Include="Entities\Inventor.cs" />
+    <Compile Include="Entities\Newspaper.cs" />
+    <Compile Include="Entities\Patent .cs" />
+    <Compile Include="Entities\Publisher.cs" />
+    <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
