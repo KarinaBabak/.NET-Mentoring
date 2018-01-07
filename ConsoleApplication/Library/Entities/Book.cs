@@ -12,5 +12,10 @@ namespace Library.Entities
         public int PagesCount { get; set; }
         public string Note { get; set; }
         public string IsbnNumber { get; set; }
+
+        public override string ToString()
+        {
+            return $"Name - {Name}, IsbnNumber - {IsbnNumber}, Note - {Note}, PagesCount - {PagesCount}, Publisher - {Publisher.Name}";
+        }
     }
 }

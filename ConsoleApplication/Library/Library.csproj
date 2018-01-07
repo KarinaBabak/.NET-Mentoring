@@ -47,8 +47,13 @@
     <Compile Include="Entities\Newspaper.cs" />
     <Compile Include="Entities\Patent .cs" />
     <Compile Include="Entities\Publisher.cs" />
+    <Compile Include="Interfaces\IXmlWorker.cs" />
+    <Compile Include="XmlWorkers\BaseXmlWorker.cs" />
     <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlWorkers\BookXmlWorker.cs" />
+    <Compile Include="XmlWorkers\NewspaperXmlWorker.cs" />
+    <Compile Include="XmlWorkers\PatentXmlWorker.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

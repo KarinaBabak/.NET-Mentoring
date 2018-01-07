@@ -13,5 +13,10 @@ namespace Library.Entities
         public int Number { get; set; }
         public DateTime Date { get; set; }
         public string IssnNumber { get; set; }
+
+        public override string ToString()
+        {
+            return $"Name - {Name}, IssnNumber - {IssnNumber}, Date - {Date.ToShortDateString()} Note - {Note}, PagesCount - {PagesCount}, Publisher - {Publisher.Name}";
+        }
     }
 }
