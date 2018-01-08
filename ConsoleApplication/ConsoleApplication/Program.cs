@@ -1,4 +1,5 @@
 ﻿using Library;
+using Library.Custom_Exceptions;
 using Library.Entities;
 using Library.Interfaces;
 using Library.XmlWorkers;
@@ -107,50 +108,74 @@ namespace ConsoleApplication
                 newspaper
             };
 
-            Catalog catalog = new Catalog();
-
-            catalog.XmlWorkers = new List<BaseXmlWorker>
+            var xmlWorkers = new List<BaseXmlWorker>
             {
                 new BookXmlWorker(),
                 new NewspaperXmlWorker(),
                 new PatentXmlWorker()
             };
 
+            Catalog catalog = new Catalog(xmlWorkers);
+
             var bookXmlWorker = new BookXmlWorker();
             var newspaperXmlWorker = new NewspaperXmlWorker();
             var patentXmlWorker = new PatentXmlWorker();
 
             StringBuilder stringBuilder = new StringBuilder();
-            StringWriter stringWriter = new StringWriter(stringBuilder);
-            try
-            {
-                catalog.WriteToXmlFile(stringWriter, entities);
 
-                XmlDocument doc = new XmlDocument();
-                doc.LoadXml(stringBuilder.ToString());
+            using (StringWriter stringWriter = new StringWriter(stringBuilder))
+            { 
+                try
+                {
+                    catalog.WriteToXmlFile(stringWriter, entities);
 
-                doc.Save(xmlFileName);
+                    XmlDocument doc = new XmlDocument();
+                    doc.LoadXml(stringBuilder.ToString());
+
+                    doc.Save(xmlFileName);
+                }
+                catch (ArgumentException exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+                catch (XmlWorkerNotFoundException exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
             }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception.Message);
-            }
 
-            #region REading doc
-
-            XmlDataDocument xmldoc = new XmlDataDocument();
-            FileStream fs = new FileStream(xmlFileName, FileMode.Open, FileAccess.Read);
-            xmldoc.Load(fs);
+            #region Reading doc
 
             string content = File.ReadAllText(xmlFileName);
 
-            StringReader stringReader = new StringReader(content);
-            foreach(var item in catalog.ReadFromXml(stringReader))
+            using (StringReader stringReader = new StringReader(content))
             {
-                Console.WriteLine(item.ToString());
-                Console.WriteLine();
+                try
+                {
+                    foreach (var item in catalog.ReadFromXml(stringReader))
+                    {
+                        Console.WriteLine(item.ToString());
+                        Console.WriteLine();
+                    }
+                }
+                catch (ArgumentException exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+                catch (XmlWorkerNotFoundException exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception.Message);
+                }
             }
-
+            
             #endregion
             Console.WriteLine("The work is done");
             Console.ReadKey();

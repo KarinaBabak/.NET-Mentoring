@@ -1,4 +1,5 @@
-﻿using Library.Interfaces;
+﻿using Library.Custom_Exceptions;
+using Library.Interfaces;
 using Library.XmlWorkers;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,12 @@ namespace Library
     {
         private const string catalogElementName = "catalog";
 
-        public List<BaseXmlWorker> XmlWorkers { private get; set; }
+        protected List<BaseXmlWorker> XmlWorkers { get; set; }
+
+        public Catalog(List<BaseXmlWorker> xmlWorkers)
+        {
+            XmlWorkers = xmlWorkers;
+        }
 
         public void WriteToXmlFile(StringWriter stringWriter, IEnumerable<IEntity> catalogEntities)
         {
@@ -28,6 +34,14 @@ namespace Library
                     try
                     {
                         entityXmlWorker.WriteEntity(xmlWriter, catalogEntity);
+                    }
+                    catch (ArgumentException exception)
+                    {
+                        throw exception;
+                    }
+                    catch (XmlWorkerNotFoundException exception)
+                    {
+                        throw exception;
                     }
                     catch (Exception exception)
                     {
@@ -71,7 +85,7 @@ namespace Library
 
             if (entityXmlWorker == null)
             {
-                throw new Exception($"There is no xml workers for entity { entityKey }");
+                throw new XmlWorkerNotFoundException($"There is no xml workers for entity { entityKey }");
             }
 
             return entityXmlWorker;
