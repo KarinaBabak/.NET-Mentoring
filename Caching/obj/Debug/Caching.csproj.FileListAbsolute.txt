@@ -1,0 +1,5 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Caching\bin\Debug\Caching.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Caching\bin\Debug\Caching.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Caching\obj\Debug\Caching.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Caching\obj\Debug\Caching.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Caching\obj\Debug\Caching.pdb

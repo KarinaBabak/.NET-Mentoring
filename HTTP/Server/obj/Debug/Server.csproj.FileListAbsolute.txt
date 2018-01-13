@@ -1,0 +1,40 @@
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\roslyn\csc.exe
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\roslyn\System.Collections.Immutable.dll
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\roslyn\System.Reflection.Metadata.dll
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\roslyn\vbc.exe
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\roslyn\VBCSCompiler.exe
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\roslyn\VBCSCompiler.exe.config
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\Server.dll.config
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\Server.dll
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\Server.pdb
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\obj\Debug\Server.dll
+E:\Documents\Trainings\.Net Mentoring D1-D2\14. Caching\Samples\HTTP\Server\obj\Debug\Server.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\roslyn\csc.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\roslyn\System.Collections.Immutable.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\roslyn\System.Reflection.Metadata.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\roslyn\vbc.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\roslyn\VBCSCompiler.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\roslyn\VBCSCompiler.exe.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\Server.dll.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\Server.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\Server.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\obj\Debug\Server.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\obj\Debug\Server.pdb

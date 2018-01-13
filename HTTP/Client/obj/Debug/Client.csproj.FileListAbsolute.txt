@@ -1,0 +1,7 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Client\bin\Debug\Client.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Client\bin\Debug\Client.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Client\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Client\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Client\obj\Debug\Client.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Client\obj\Debug\Client.pdb

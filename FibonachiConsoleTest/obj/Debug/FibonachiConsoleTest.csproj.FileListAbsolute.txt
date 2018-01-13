@@ -1,0 +1,10 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\FibonachiConsoleTest\bin\Debug\FibonachiConsoleTest.exe.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\FibonachiConsoleTest\obj\Debug\FibonachiConsoleTest.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\FibonachiConsoleTest\bin\Debug\FibonachiConsoleTest.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\FibonachiConsoleTest\bin\Debug\FibonachiConsoleTest.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\FibonachiConsoleTest\bin\Debug\Fibonachi.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\FibonachiConsoleTest\bin\Debug\StackExchange.Redis.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\FibonachiConsoleTest\bin\Debug\Fibonachi.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\FibonachiConsoleTest\bin\Debug\StackExchange.Redis.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\FibonachiConsoleTest\obj\Debug\FibonachiConsoleTest.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\FibonachiConsoleTest\obj\Debug\FibonachiConsoleTest.pdb
