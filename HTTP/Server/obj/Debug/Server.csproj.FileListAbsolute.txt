@@ -35,6 +35,5 @@ D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\Server.dll
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\Server.pdb
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\obj\Debug\Server.dll
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\HTTP\Server\obj\Debug\Server.pdb

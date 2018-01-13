@@ -1,0 +1,9 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibbonachi\bin\Debug\Fibbonachi.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibbonachi\bin\Debug\Fibbonachi.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibbonachi\bin\Debug\Caching.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibbonachi\bin\Debug\StackExchange.Redis.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibbonachi\bin\Debug\Caching.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibbonachi\bin\Debug\StackExchange.Redis.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibbonachi\obj\Debug\Fibbonachi.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibbonachi\obj\Debug\Fibbonachi.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibbonachi\obj\Debug\Fibbonachi.pdb

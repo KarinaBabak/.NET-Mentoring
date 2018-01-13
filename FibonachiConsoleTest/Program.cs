@@ -1,9 +1,8 @@
-﻿using Fibonachi;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Caching;
+using Fibbonachi;
 
 namespace FibonachiConsoleTest
 {
@@ -36,13 +35,13 @@ namespace FibonachiConsoleTest
 
         private static void MemoryCache()
         {
-            var generator = new Fibonachi.Fibonachi(new InMemoryCache());
+            var generator = new FibonachiCacheManager();
             DisplayNumbers(generator.GetFibonachiNumbers(10));
         }
 
         private static void RedisCache()
         {
-            var generator = new Fibonachi.Fibonachi(new RedisCache("localhost"));
+            var generator = new FibonachiCacheManager(new RedisCache<int>("localhost"));
             DisplayNumbers(generator.GetFibonachiNumbers(10));
         }
 

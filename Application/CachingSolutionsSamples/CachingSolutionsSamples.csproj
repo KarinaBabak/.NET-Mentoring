@@ -49,6 +49,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.XML" />
@@ -66,11 +67,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CategoriesManager.cs" />
-    <Compile Include="CategoriesMemoryCache.cs" />
-    <Compile Include="CategoriesRedisCache.cs" />
-    <Compile Include="ICategoriesCache.cs" />
+    <Compile Include="EntitiesManager.cs" />
     <Compile Include="CacheTests.cs" />
+    <Compile Include="MemoryEntitiesManagerWithPolicy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +77,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Caching\Caching.csproj">
+      <Project>{5195b3bf-b4a5-4724-b4cb-3cd89e4d172b}</Project>
+      <Name>Caching</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NorthwindLibrary\NorthwindLibrary.csproj">
       <Project>{83072721-060e-4738-9abd-7711c4f07ed2}</Project>
       <Name>NorthwindLibrary</Name>

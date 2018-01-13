@@ -1,17 +1,1 @@
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\CachingSolutionsSamples.dll.config
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\CachingSolutionsSamples.dll
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\CachingSolutionsSamples.pdb
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\EntityFramework.dll
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\EntityFramework.SqlServer.dll
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\NorthwindLibrary.dll
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\StackExchange.Redis.dll
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\NorthwindLibrary.pdb
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\EntityFramework.xml
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\EntityFramework.SqlServer.xml
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\StackExchange.Redis.pdb
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\StackExchange.Redis.xml
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
 D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\obj\Debug\CachingSolutionsSamples.csprojResolveAssemblyReference.cache
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\obj\Debug\CachingSolutionsSamples.dll
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Application\CachingSolutionsSamples\obj\Debug\CachingSolutionsSamples.pdb

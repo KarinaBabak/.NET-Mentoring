@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,9 +54,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Fibonachi\Fibonachi.csproj">
-      <Project>{512b5840-24f7-45fa-908a-3cb4e59e5217}</Project>
-      <Name>Fibonachi</Name>
+    <ProjectReference Include="..\Caching\Caching.csproj">
+      <Project>{5195b3bf-b4a5-4724-b4cb-3cd89e4d172b}</Project>
+      <Name>Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fibbonachi\Fibbonachi.csproj">
+      <Project>{cb9584ea-3e4e-4d03-b87f-608e8c3f38a1}</Project>
+      <Name>Fibbonachi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

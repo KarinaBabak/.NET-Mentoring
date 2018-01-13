@@ -1,0 +1,2 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Task2.ConsoleApp.Tests\bin\Debug\Task2.ConsoleApp.Tests.exe.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Task2.ConsoleApp.Tests\obj\Debug\Task2.ConsoleApp.Tests.csprojResolveAssemblyReference.cache

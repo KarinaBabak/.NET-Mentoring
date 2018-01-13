@@ -1,7 +1,0 @@
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibonachi\obj\Debug\Fibonachi.csprojResolveAssemblyReference.cache
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibonachi\bin\Debug\Fibonachi.dll
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibonachi\bin\Debug\Fibonachi.pdb
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibonachi\bin\Debug\StackExchange.Redis.dll
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibonachi\bin\Debug\StackExchange.Redis.xml
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibonachi\obj\Debug\Fibonachi.dll
-D:\Epam\.NET Mentoring D1-D2\Tasks\Task12_Caching\Fibonachi\obj\Debug\Fibonachi.pdb
