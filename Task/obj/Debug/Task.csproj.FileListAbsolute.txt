@@ -1,0 +1,12 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task\bin\Debug\Task.dll.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task\bin\Debug\Task.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task\bin\Debug\Task.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task\bin\Debug\EntityFramework.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task\bin\Debug\EntityFramework.SqlServer.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task\bin\Debug\EntityFramework.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task\bin\Debug\EntityFramework.SqlServer.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task\obj\Debug\Task.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task\obj\Debug\Task.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task\obj\Debug\Task.pdb

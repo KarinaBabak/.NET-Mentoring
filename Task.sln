@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task", "Task\Task.csproj", "{D6C1A125-1AF5-44C4-BEB1-E9F49BB81460}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1.BookCatalog", "Task1.BookCatalog\Task1.BookCatalog.csproj", "{34542B01-30D1-4796-B0A0-2C17E0A2B2C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1.ConsoleApp.Test", "Task1.ConsoleApp.Test\Task1.ConsoleApp.Test.csproj", "{AD81F040-EF7C-4105-B84B-92B35A127642}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6C1A125-1AF5-44C4-BEB1-E9F49BB81460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C1A125-1AF5-44C4-BEB1-E9F49BB81460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C1A125-1AF5-44C4-BEB1-E9F49BB81460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C1A125-1AF5-44C4-BEB1-E9F49BB81460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34542B01-30D1-4796-B0A0-2C17E0A2B2C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34542B01-30D1-4796-B0A0-2C17E0A2B2C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34542B01-30D1-4796-B0A0-2C17E0A2B2C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34542B01-30D1-4796-B0A0-2C17E0A2B2C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD81F040-EF7C-4105-B84B-92B35A127642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD81F040-EF7C-4105-B84B-92B35A127642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD81F040-EF7C-4105-B84B-92B35A127642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD81F040-EF7C-4105-B84B-92B35A127642}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

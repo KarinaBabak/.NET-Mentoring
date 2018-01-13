@@ -1,0 +1,8 @@
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task1.ConsoleApp.Test\bin\Debug\Task1.ConsoleApp.Test.exe.config
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task1.ConsoleApp.Test\bin\Debug\Task1.ConsoleApp.Test.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task1.ConsoleApp.Test\bin\Debug\Task1.ConsoleApp.Test.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task1.ConsoleApp.Test\bin\Debug\Task1.BookCatalog.dll
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task1.ConsoleApp.Test\bin\Debug\Task1.BookCatalog.pdb
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task1.ConsoleApp.Test\obj\Debug\Task1.ConsoleApp.Test.csprojResolveAssemblyReference.cache
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task1.ConsoleApp.Test\obj\Debug\Task1.ConsoleApp.Test.exe
+D:\Epam\.NET Mentoring D1-D2\Tasks\Task13_Serialization\Task\Task1.ConsoleApp.Test\obj\Debug\Task1.ConsoleApp.Test.pdb
